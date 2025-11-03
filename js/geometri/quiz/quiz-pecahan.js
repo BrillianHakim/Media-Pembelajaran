@@ -3,32 +3,33 @@
 ********************************/
 let soalList = [
   {
-    soal: "3/8 + 2/8 = …",
-    opsi: ["4/8","5/8","6/8","7/8"],
-    jawaban: "5/8"
+    soal: "\\( \\frac{3}{8} + \\frac{2}{8} = \\dots \\)",
+    opsi: ["\\( \\frac{4}{8} \\)","\\( \\frac{5}{8} \\)","\\( \\frac{6}{8} \\)","\\( \\frac{7}{8} \\)"],
+    jawaban: "\\( \\frac{5}{8} \\)"
   },
   {
-    soal: "5/6 − 2/6 = …",
-    opsi: ["2/6","3/6","4/6","5/6"],
-    jawaban: "3/6"
+    soal: "\\( \\frac{5}{6} - \\frac{2}{6} = \\dots \\)",
+    opsi: ["\\( \\frac{2}{6} \\)","\\( \\frac{3}{6} \\)","\\( \\frac{4}{6} \\)","\\( \\frac{5}{6} \\)"],
+    jawaban: "\\( \\frac{3}{6} \\)"
   },
   {
-    soal: "Sinta mempunyai 2/5 bagian kue coklat, lalu membeli lagi 3/10 bagian. Total = …",
-    opsi: ["4/10","5/10","7/10","8/10"],
-    jawaban: "7/10"
+    soal: "Sinta mempunyai \\( \\frac{2}{5} \\) bagian kue coklat, lalu membeli lagi \\( \\frac{3}{10} \\) bagian. Total = \\dots",
+    opsi: ["\\( \\frac{4}{10} \\)","\\( \\frac{5}{10} \\)","\\( \\frac{7}{10} \\)","\\( \\frac{8}{10} \\)"],
+    jawaban: "\\( \\frac{7}{10} \\)"
   },
   {
-    soal: "Ibu mempunyai 3/4 liter minyak, dipakai 1/8 liter. Sisa = …",
-    opsi: ["2/8","4/8","5/8","6/8"],
-    jawaban: "6/8"
+    soal: "Ibu mempunyai \\( \\frac{3}{4} \\) liter minyak, dipakai \\( \\frac{1}{8} \\) liter. Sisa = \\dots",
+    opsi: ["\\( \\frac{2}{8} \\)","\\( \\frac{4}{8} \\)","\\( \\frac{5}{8} \\)","\\( \\frac{6}{8} \\)"],
+    jawaban: "\\( \\frac{6}{8} \\)"
   },
   {
-    soal: "7/12 + 5/6 = …",
+    soal: "\\( \\frac{7}{12} + \\frac{5}{6} = \\dots \\)",
     img: "../assets/img/GPT.png",
-    opsi: ["13/12","14/12","15/12","17/12"],
-    jawaban: "15/12"
+    opsi: ["\\( \\frac{13}{12} \\)","\\( \\frac{14}{12} \\)","\\( \\frac{15}{12} \\)","\\( \\frac{17}{12} \\)"],
+    jawaban: "\\( \\frac{15}{12} \\)"
   }
 ];
+
 
 /* acak opsi */
 function shuffle(arr){ return arr.sort(()=>Math.random()-0.5); }

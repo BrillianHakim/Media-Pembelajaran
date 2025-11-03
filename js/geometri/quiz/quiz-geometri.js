@@ -15,6 +15,7 @@ let soalList = [
   {
     soal: `Sebuah kerucut memiliki jari-jari alas 6 cm dan tinggi 9 cm. Berapakah volume kerucut tersebut?`,
     opsi: ["324π cm³","108π cm³","216π cm³","162π cm³"],
+    img :"../assets/img/69.jpeg",
     jawaban: "216π cm³"
   },
   {
@@ -24,6 +25,7 @@ let soalList = [
   },
   {
     soal: `Sebuah kerucut memiliki jari-jari alas r=7 cm dan garis pelukis 10 cm. Berapakah luas selimut kerucut tersebut?`,
+    img: "../assets/img/710.jpeg",
     opsi: ["154 cm²","220 cm²","70π cm²","77π cm²"],
     jawaban: "77π cm²"
   }
@@ -46,12 +48,18 @@ function renderSoal(){
         <h6 class="fw-bold text-primary">Soal ${i+1}</h6>
         <p>${item.soal}</p>
 
+        ${
+          item.img
+          ? `<img src="${item.img}" class="img-fluid rounded mb-2" style="max-width:200px">`
+          : ""
+        }
+
         ${item.opsi.map((o)=>
           `<label class="d-block my-1">
             <input type="radio" name="opsi-${i}" value="${o}"> ${o}
-          </label>`).join("")
-        }
-
+          </label>`
+        ).join("")}
+        
         <p class="mt-2 fw-bold text-danger d-none" id="kunci-${i}">
           Jawaban: ${item.jawaban}
         </p>

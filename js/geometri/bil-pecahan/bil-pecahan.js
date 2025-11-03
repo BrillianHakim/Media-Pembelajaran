@@ -244,3 +244,63 @@ function ulangLatihan() {
 
 
 renderSoal(current);
+
+function hitungPecahan() {
+  const f1 = document.getElementById("f1").value.trim();
+  const f2 = document.getElementById("f2").value.trim();
+  const op = document.getElementById("op").value;
+  const hasilEl = document.getElementById("hasilPecahan");
+  const langkahEl = document.getElementById("langkahPecahan");
+
+  // Validasi input
+  if (!f1 || !f2 || !f1.includes("/") || !f2.includes("/")) {
+    hasilEl.innerHTML = "⚠️ Masukkan pecahan dengan format benar, contoh: 1/2";
+    langkahEl.innerHTML = "";
+    return;
+  }
+
+  // Pisahkan pembilang & penyebut
+  const [a, b] = f1.split("/").map(Number);
+  const [c, d] = f2.split("/").map(Number);
+
+  if (b === 0 || d === 0) {
+    hasilEl.innerHTML = "❌ Penyebut tidak boleh nol!";
+    langkahEl.innerHTML = "";
+    return;
+  }
+
+  // Cari KPK penyebut
+  const kpk = (x, y) => {
+    const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+    return (x * y) / gcd(x, y);
+  };
+  const k = kpk(b, d);
+
+  // Ubah ke penyebut sama
+  const pemb1 = a * (k / b);
+  const pemb2 = c * (k / d);
+
+  // Operasi
+  let hasilPembilang;
+  if (op === "+") hasilPembilang = pemb1 + pemb2;
+  else hasilPembilang = pemb1 - pemb2;
+
+  // Sederhanakan hasil
+  const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+  const f = gcd(Math.abs(hasilPembilang), k);
+  const sederhanaA = hasilPembilang / f;
+  const sederhanaB = k / f;
+
+  // Tampilkan hasil
+  hasilEl.innerHTML = `✅ Hasil = ${sederhanaA}/${sederhanaB}`;
+  langkahEl.innerHTML = `
+    KPK(${b}, ${d}) = ${k}<br>
+    Ubah pecahan → ${a}/${b} = ${pemb1}/${k}, ${c}/${d} = ${pemb2}/${k}<br>
+    Hitung: ${pemb1} ${op} ${pemb2} = ${hasilPembilang}<br>
+    Sederhanakan → ${hasilPembilang}/${k} = ${sederhanaA}/${sederhanaB}
+  `;
+
+  // Render MathJax
+  if (window.MathJax) MathJax.typeset();
+}
+

@@ -72,100 +72,117 @@
 <!-- AUDIO -->
 <audio id="audioBenar" src="../assets/BENAR.mp3"></audio>
 
+<!-- Tambahkan di atas body -->
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<body class="container py-4">
+
+
+
+
+<!-- AUDIO -->
+<audio id="audioBenar" src="../assets/BENAR.mp3"></audio>
+
 <script>
 /*******************************
- * DATA SOAL + KUNCI + PENYELESAIAN
+ * DATA SOAL + KUNCI + PENYELESAIAN (MathJax)
  *******************************/
 const soalList = [
   {
-    soal: "1) Sebuah kerucut memiliki jari-jari alas 7 cm dan garis pelukis 10 cm. Hitung luas selimut kerucut! (π = 22/7)",
+    soal: "1) Sebuah kerucut memiliki jari-jari alas 7 cm dan garis pelukis 10 cm. Hitung luas selimut kerucut! \\( \\pi = \\dfrac{22}{7} \\)",
     jawaban: 220,
     solusi: `Penyelesaian :
-Luas selimut = π × r × s
-= 22/7 × 7 × 10
-= 22 × 10 = 220 cm²`
+\\( \\text{Luas selimut} = \\pi \\times r \\times s \\)
+\\( = \\dfrac{22}{7} \\times 7 \\times 10 \\)
+\\( = 22 \\times 10 = 220\\,\\text{cm}^2 \\)`
   },
   {
-    soal: "2) Sebuah kerucut memiliki jari-jari alas 6 cm dan garis pelukis 10 cm. Hitung luas permukaan! (π = 3.14)",
+    soal: "2) Sebuah kerucut memiliki jari-jari alas 6 cm dan garis pelukis 10 cm. Hitung luas permukaan! \\( \\pi = 3.14 \\)",
     jawaban: 301.44,
     solusi: `Penyelesaian :
-Luas permukaan = π × r (r + s)
-= 3.14 × 6 × (6 + 10)
-= 3.14 × 6 × 16
-= 3.14 × 96 = 301.44 cm²`
+\\( L = \\pi \\times r (r + s) \\)
+\\( = 3.14 \\times 6 \\times (6 + 10) \\)
+\\( = 3.14 \\times 6 \\times 16 \\)
+\\( = 3.14 \\times 96 = 301.44\\,\\text{cm}^2 \\)`
   },
   {
-    soal: "3) Sebuah kerucut memiliki jari-jari alas 7 cm. Jika luas selimut kerucut 308 cm², tentukan panjang garis pelukis s! (π = 22/7)",
+    soal: "3) Sebuah kerucut memiliki jari-jari alas 7 cm. Jika luas selimut kerucut 308 cm², tentukan panjang garis pelukis s! \\( \\pi = \\dfrac{22}{7} \\)",
     jawaban: 14,
     solusi: `Penyelesaian :
-Luas selimut = π × r × s
-308 = 22/7 × 7 × s
-308 = 22 × s
-s = 308 ÷ 22 = 14 cm`
+\\( L = \\pi \\times r \\times s \\)
+\\( 308 = \\dfrac{22}{7} \\times 7 \\times s \\)
+\\( 308 = 22s \\)
+\\( s = \\dfrac{308}{22} = 14\\,\\text{cm} \\)`
   },
   {
-    soal: "4) Sebuah kerucut memiliki jari-jari alas 7 cm dan tinggi 9 cm. Hitung volume kerucut! (π = 22/7)",
+    soal: "4) Sebuah kerucut memiliki jari-jari alas 7 cm dan tinggi 9 cm. Hitung volume kerucut! \\( \\pi = \\dfrac{22}{7} \\)",
     jawaban: 462,
     solusi: `Penyelesaian :
-V = 1/3 × π × r² × t
-= 1/3 × 22/7 × 7² × 9
-= 1/3 × 22/7 × 49 × 9
-= 1/3 × (22 × 441)/7 = 1/3 × 1386 = 462 cm³`
+\\( V = \\dfrac{1}{3} \\pi r^2 t \\)
+\\( = \\dfrac{1}{3} \\times \\dfrac{22}{7} \\times 7^2 \\times 9 \\)
+\\( = \\dfrac{1}{3} \\times \\dfrac{22}{7} \\times 49 \\times 9 \\)
+\\( = \\dfrac{1}{3} \\times \\dfrac{22 \\times 441}{7} = \\dfrac{1}{3} \\times 1386 = 462\\,\\text{cm}^3 \\)`
   },
   {
-    soal: "5) Sebuah kerucut memiliki jari-jari 6 cm dan tinggi 12 cm. Hitung volumenya (π = 3.14)",
+    soal: "5) Sebuah kerucut memiliki jari-jari 6 cm dan tinggi 12 cm. Hitung volumenya \\( \\pi = 3.14 \\)",
     jawaban: 452.16,
     solusi: `Penyelesaian :
-V = 1/3 × π × r² × t
-= 1/3 × 3.14 × 6² × 12
-= 1/3 × 3.14 × 36 × 12
-= 1/3 × 3.14 × 432 = 1/3 × 1356.48 = 452.16 cm³`
+\\( V = \\dfrac{1}{3} \\pi r^2 t \\)
+\\( = \\dfrac{1}{3} \\times 3.14 \\times 6^2 \\times 12 \\)
+\\( = \\dfrac{1}{3} \\times 3.14 \\times 36 \\times 12 \\)
+\\( = \\dfrac{1}{3} \\times 3.14 \\times 432 = \\dfrac{1}{3} \\times 1356.48 = 452.16\\,\\text{cm}^3 \\)`
   },
   {
-    soal: "6) Sebuah kerucut memiliki jari-jari 5 cm dan volumenya 261,67 cm³. Hitung tinggi kerucutnya! (π = 3.14)",
+    soal: "6) Sebuah kerucut memiliki jari-jari 5 cm dan volumenya 261,67 cm³. Hitung tinggi kerucutnya! \\( \\pi = 3.14 \\)",
     jawaban: 10,
     solusi: `Penyelesaian :
-V = 1/3 × π × r² × t
-261.67 = 1/3 × 3.14 × 5² × t
-261.67 = 1/3 × 3.14 × 25 × t
-261.67 = 26.17 t
-t = 261.67 ÷ 26.17 = 10`
+\\( V = \\dfrac{1}{3} \\pi r^2 t \\)
+\\( 261.67 = \\dfrac{1}{3} \\times 3.14 \\times 5^2 \\times t \\)
+\\( 261.67 = \\dfrac{1}{3} \\times 3.14 \\times 25 \\times t \\)
+\\( 261.67 = 26.17t \\)
+\\( t = \\dfrac{261.67}{26.17} = 10 \\)`
   },
   {
-    soal: "7) Rani membuat topi ulang tahun berbentuk kerucut. r = 7 cm, s = 10 cm. Hitung luas permukaan topi yang harus ditutupi kertas warna! (π = 22/7)",
+    soal: "7) Rani membuat topi ulang tahun berbentuk kerucut. \\( r = 7\\,\\text{cm}, s = 10\\,\\text{cm} \\). Hitung luas permukaan! \\( \\pi = \\dfrac{22}{7} \\)",
     jawaban: 374,
     solusi: `Penyelesaian :
-L = π × r × (r + s)
-= 22/7 × 7 × (7 + 10)
-= 22 × 17 = 374 cm²`
+\\( L = \\pi r (r + s) \\)
+\\( = \\dfrac{22}{7} \\times 7 \\times (7 + 10) \\)
+\\( = 22 \\times 17 = 374\\,\\text{cm}^2 \\)`
   },
   {
-    soal: "8) Sebuah topi kerucut memiliki jari-jari 7 cm. Luas permukaan topi = 374 cm². Tentukan panjang s! (π = 22/7)",
+    soal: "8) Sebuah topi kerucut memiliki jari-jari 7 cm. Luas permukaan topi = 374 cm². Tentukan panjang s! \\( \\pi = \\dfrac{22}{7} \\)",
     jawaban: 10,
     solusi: `Penyelesaian :
-L = π × r × (r + s)
-374 = 22/7 × 7 × (7 + s)
-374 = 22 (7 + s)
-374 ÷ 22 = 7 + s
-17 = 7 + s → s = 10`
+\\( L = \\pi r (r + s) \\)
+\\( 374 = \\dfrac{22}{7} \\times 7 \\times (7 + s) \\)
+\\( 374 = 22(7 + s) \\)
+\\( \\dfrac{374}{22} = 7 + s \\)
+\\( 17 = 7 + s \\Rightarrow s = 10 \\)`
   },
   {
-    soal: "9) Sebuah tenda berbentuk kerucut r = 4 m, t = 9 m. Hitung volume! (π = 3.14)",
+    soal: "9) Sebuah tenda berbentuk kerucut \\( r = 4\\,\\text{m}, t = 9\\,\\text{m} \\). Hitung volume! \\( \\pi = 3.14 \\)",
     jawaban: 150.72,
     solusi: `Penyelesaian :
-V = 1/3 × π × r² × t
-= 1/3 × 3.14 × 4² × 9
-= 1/3 × 3.14 × 16 × 9
-= 1/3 × 452.16 = 150.72 m³`
+\\( V = \\dfrac{1}{3} \\pi r^2 t \\)
+\\( = \\dfrac{1}{3} \\times 3.14 \\times 4^2 \\times 9 \\)
+\\( = \\dfrac{1}{3} \\times 3.14 \\times 16 \\times 9 \\)
+\\( = \\dfrac{1}{3} \\times 452.16 = 150.72\\,\\text{m}^3 \\)`
   },
   {
-    soal: "10) Sebuah kerucut tanah liat r = 5 cm, V = 261.67 cm³. Hitung tinggi! (π = 3.14)",
+    soal: "10) Sebuah kerucut tanah liat \\( r = 5\\,\\text{cm}, V = 261.67\\,\\text{cm}^3 \\). Hitung tinggi! \\( \\pi = 3.14 \\)",
     jawaban: 10,
     solusi: `Penyelesaian :
-V = 1/3 × π × r² × t
-261.67 = 1/3 × 3.14 × 5² × t
-261.67 = 26.17 t
-t = 261.67 ÷ 26.17 = 10`
+\\( V = \\dfrac{1}{3} \\pi r^2 t \\)
+\\( 261.67 = \\dfrac{1}{3} \\times 3.14 \\times 5^2 \\times t \\)
+\\( 261.67 = 26.17t \\)
+\\( t = \\dfrac{261.67}{26.17} = 10 \\)`
   }
 ];
 
@@ -185,105 +202,63 @@ function renderSoal(){
     `;
   });
   area.innerHTML = html;
+  MathJax.typeset(); // render MathJax
 }
 renderSoal();
 
 /*******************************
- * UTILS: compare numeric with tolerance
+ * UTILITAS DAN PEMERIKSAAN (tetap sama)
  *******************************/
-function nearlyEqual(a, b, relTol = 0.01){ // 1% tolerance
-  if (typeof a !== 'number' || typeof b !== 'number') return false;
-  const diff = Math.abs(a - b);
-  return diff <= Math.abs(b) * relTol + 1e-9;
+function nearlyEqual(a,b,relTol=0.01){
+  if(typeof a!=='number'||typeof b!=='number')return false;
+  const diff=Math.abs(a-b);
+  return diff<=Math.abs(b)*relTol+1e-9;
 }
-
-/*******************************
- * PERIKSA SEMUA
- *******************************/
 function periksaSemua(){
-  let skor = 0;
-  const audioBenar = document.getElementById('audioBenar');
-
-  // hasil detail untuk rekap
-  const rekap = [];
-
-  soalList.forEach((it, i) => {
-    const input = document.getElementById(`jawab-${i}`);
-    const box = document.getElementById(`soal-${i}`);
-    const solBox = document.getElementById(`sol-${i}`);
-
-    // ambil nilai input, normalisasi koma -> titik
-    const raw = (input.value || '').toString().trim().replace(',', '.');
-
-    // convert to number if possible
-    const valNum = parseFloat(raw);
-    const isNumber = !Number.isNaN(valNum);
-
-    // cek benar dengan toleransi untuk angka pecahan
-    let benar = false;
-    if (isNumber) {
-      // compare numeric dengan toleransi
-      benar = nearlyEqual(valNum, Number(it.jawaban), 0.01);
-    } else {
-      // jika bukan angka, bandingkan string (misal "10" vs "10")
-      benar = raw === String(it.jawaban);
-    }
-
-    // tampilkan penyelesaian (selalu ditampilkan setelah submit)
+  let skor=0;
+  const audioBenar=document.getElementById('audioBenar');
+  const rekap=[];
+  soalList.forEach((it,i)=>{
+    const input=document.getElementById(`jawab-${i}`);
+    const box=document.getElementById(`soal-${i}`);
+    const solBox=document.getElementById(`sol-${i}`);
+    const raw=(input.value||'').toString().trim().replace(',','.');
+    const valNum=parseFloat(raw);
+    const isNumber=!Number.isNaN(valNum);
+    let benar=false;
+    if(isNumber){benar=nearlyEqual(valNum,Number(it.jawaban),0.01);}else{benar=raw===String(it.jawaban);}
     solBox.classList.remove('d-none');
-    solBox.innerText = it.solusi;
-
-    // tandai box
+    solBox.innerHTML=it.solusi;
+    MathJax.typesetPromise([solBox]);
     box.classList.remove('benar','salah');
-    if (benar){
-      box.classList.add('benar');
-      skor += 10;
-      try { audioBenar.currentTime = 0; audioBenar.play(); } catch(e){}
-    } else {
-      box.classList.add('salah');
-    }
-
-    rekap.push({
-      no: i+1,
-      kunci: it.jawaban,
-      skor: benar?10:0,
-      nilai: benar?10:0,
-      solusi: it.solusi
-    });
+    if(benar){box.classList.add('benar');skor+=10;try{audioBenar.currentTime=0;audioBenar.play();}catch(e){}}
+    else{box.classList.add('salah');}
+    rekap.push({no:i+1,kunci:it.jawaban,skor:benar?10:0,nilai:benar?10:0,solusi:it.solusi});
   });
-
-  // tampil skor
-  document.getElementById('skorText').textContent = `Nilai Kamu: ${skor}`;
-
-  // tampil rekap tabel
-  tampilkanRekap(rekap, skor);
+  document.getElementById('skorText').textContent=`Nilai Kamu: ${skor}`;
+  tampilkanRekap(rekap,skor);
 }
-
-/*******************************
- * TAMPILKAN REKAP
- *******************************/
-function tampilkanRekap(rows, totalSkor){
-  const tbody = document.getElementById('rekap-body');
-  let html = '';
-  rows.forEach(r => {
-    html += `
+function tampilkanRekap(rows,totalSkor){
+  const tbody=document.getElementById('rekap-body');
+  let html='';
+  rows.forEach(r=>{
+    html+=`
       <tr>
         <td>${r.no}</td>
         <td>${r.kunci}</td>
         <td>${r.skor}</td>
         <td>${r.nilai}</td>
         <td><pre style="white-space:pre-wrap;text-align:left;margin:0">${r.solusi}</pre></td>
-      </tr>
-    `;
+      </tr>`;
   });
-  tbody.innerHTML = html;
-
-  document.getElementById('nilaiAkhirTxt').textContent = `Nilai Akhir: ${totalSkor} / 100`;
+  tbody.innerHTML=html;
+  MathJax.typesetPromise([tbody]);
+  document.getElementById('nilaiAkhirTxt').textContent=`Nilai Akhir: ${totalSkor} / 100`;
   document.getElementById('rekap-container').classList.remove('d-none');
-
-  // scroll ke rekap agar guru / siswa langsung lihat hasil
   document.getElementById('rekap-container').scrollIntoView({behavior:'smooth'});
 }
 </script>
+</body>
+
 </body>
 </html>
