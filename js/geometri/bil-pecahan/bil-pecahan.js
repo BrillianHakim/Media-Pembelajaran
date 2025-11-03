@@ -34,6 +34,7 @@ let soalList = [
   {
     sub: "Latihan 1 — Penjumlahan Pecahan",
     soal: "1/4 + 1/4 = …",
+    img: "../assets/img/Kacang.png",
     opsi: shuffle(["2/4", "1/2", "1/8", "3/4"]),
     jawaban: "1/2"
   },
@@ -82,6 +83,7 @@ let soalList = [
   {
     sub: "Latihan 3 — Soal Cerita Pecahan",
     soal: "Ani memakan 1/4 bagian kue. Lalu ia memakan lagi 2/4 bagian. Berapa bagian kue yang ia makan?",
+    img: "../assets/img/Yes.png",
     opsi: shuffle(["3/4", "2/4", "4/4", "1/2"]),
     jawaban: "3/4"
   },
@@ -124,28 +126,44 @@ function shuffle(arr) {
 /**************
   RENDER
 **************/
-function renderSoal(i) {
+function renderSoal(i){
   const quizArea = document.getElementById("quiz-area");
   const item = soalList[i];
 
   let inputHTML = "";
-  item.opsi.forEach((pil, idx) => {
-    inputHTML += `
+  let imgHTML = "";
+
+  if(item.img){
+    imgHTML = `
+      <div class="text-center mb-2">
+        <img src="${item.img}" 
+             alt="gambar" 
+             style="max-width:180px; border-radius:8px;">
+      </div>
+    `;
+  }
+
+  if(item.opsi){
+    item.opsi.forEach((pil,idx)=>{
+      inputHTML += `
       <div class="form-check">
         <input class="form-check-input" type="radio"
-          name="opsi-${i}" id="opsi-${i}-${idx}" value="${pil}">
+               name="opsi-${i}" id="opsi-${i}-${idx}" value="${pil}">
         <label class="form-check-label" for="opsi-${i}-${idx}">
           ${pil}
         </label>
-      </div>
-    `;
-  });
+      </div>`;
+    });
+  }
 
   quizArea.innerHTML += `
     <div class="quiz-card" id="soal-${i}">
       <span class="badge bg-info mb-2">${item.sub}</span>
-      <h6 class="fw-bold text-primary">Soal ${i + 1}</h6>
+      <h6 class="fw-bold text-primary">Soal ${i+1}</h6>
       <p>${item.soal}</p>
+
+      ${imgHTML}
+
       ${inputHTML}
       <button class="btn btn-success btn-sm mt-2" onclick="cekJawaban(${i})">
         Periksa
@@ -154,6 +172,7 @@ function renderSoal(i) {
     </div>
   `;
 }
+
 
 /**************
   CEK

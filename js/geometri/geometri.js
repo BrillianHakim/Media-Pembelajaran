@@ -52,13 +52,13 @@ let soalList = [
     sub: "Latihan 1 — Luas Kerucut",
     soal: "Jari-jari kerucut = 7 cm. Berapakah luas alasnya? (π=3.14)",
     opsi: shuffle(["153.86 cm²", "154 cm²", "100 cm²", "200 cm²"]),
-    img: "/assets/img/7.png",
+    img: "../assets/img/7.png",
     jawaban: "153.86 cm²"
   },
   {
     sub: "Latihan 1 — Luas Kerucut",
     soal: "Jika r = 10 cm dan s = 15 cm, luas selimutnya adalah …",
-    img: "/assets/img/Sr.png",
+    img: "../assets/img/Sr.png",
     opsi: shuffle(["471.00 cm²","471 cm²","300 cm²","150 cm²"]),
     jawaban: "471.00 cm²"
   },
@@ -76,7 +76,7 @@ let soalList = [
   {
     sub: "Latihan 1 — Luas Kerucut",
     soal: "Luas permukaan = π × r (r + s). Jika r=7 dan s=10 maka …",
-    img: "/assets/img/tt.png",    
+    img: "../assets/img/tt.png",    
     opsi: shuffle(["373.66 cm²","300 cm²","200 cm²","150 cm²"]),
     jawaban: "373.66 cm²"
   },
@@ -96,14 +96,14 @@ let soalList = [
   {
     sub: "Latihan 2 — Volume Kerucut",
     soal: "Jika r = 7 cm dan t = 14 cm, volumenya adalah … (π = 3.14)",
-    img: "/assets/img/14.png",
+    img: "../assets/img/14.png",
     opsi: shuffle(["718.67 cm³","700 cm³","650 cm³","800 cm³"]),
     jawaban: "718.67 cm³"
   },
   {
     sub: "Latihan 2 — Volume Kerucut",
     soal: "Jari-jari = 3 cm, t = 4 cm. Volume = … (π=3.14)",
-    img: "/assets/img/sip.png",
+    img: "../assets/img/sip.png",
     opsi: shuffle(["37.68 cm³","50 cm³","60 cm³","40 cm³"]),
     jawaban: "37.68 cm³"
   },
@@ -129,14 +129,14 @@ let soalList = [
   {
     sub: "Latihan 3 — Soal Cerita",
     soal: "Sebuah topi ulang tahun berbentuk kerucut punya r=7 cm dan s=10 cm. Apa yang ditanyakan?",
-    img: "/assets/img/11 Topi Ulang Tahun.webp",
+    img: "../assets/img/11 Topi Ulang Tahun.webp",
     opsi: shuffle(["Luas permukaan","Berat topi","Keliling topi","Warna topi"]),
     jawaban: "Luas permukaan"
   },
   {
     sub: "Latihan 3 — Soal Cerita",
     soal: "Ibu membuat corong air r=3 cm dan t=4 cm. Berapakah volumenya?",
-    img: "/assets/img/sip.png",
+    img: "../assets/img/sip.png",
     opsi: shuffle(["37.68 cm³","50 cm³","100 cm³","90 cm³"]),
     jawaban: "37.68 cm³"
   },
