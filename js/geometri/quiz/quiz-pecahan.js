@@ -24,6 +24,7 @@ let soalList = [
   },
   {
     soal: "7/12 + 5/6 = …",
+    img: "../assets/img/GPT.png",
     opsi: ["13/12","14/12","15/12","17/12"],
     jawaban: "15/12"
   }
@@ -40,26 +41,26 @@ let skor = 0;
 ********************************/
 function renderSoal(){
   let html = "";
-
   soalList.forEach((item,i)=>{
     html += `
-      <div id="soal-${i}" class="quiz-card section-box mb-3">
+      <div id="soal-${i}" class="section-box">
         <h6 class="fw-bold text-primary">Soal ${i+1}</h6>
         <p>${item.soal}</p>
 
-        ${item.opsi.map((o,idx)=>
-          `<div class="form-check">
-              <input class="form-check-input" type="radio" 
-                     name="opsi-${i}" value="${o}"
-                     id="opsi-${i}-${idx}">
-              <label class="form-check-label" for="opsi-${i}-${idx}">
-                ${o}
-              </label>
-           </div>`
-        ).join("")}
+        ${
+          item.img
+          ? `<img src="${item.img}" class="img-fluid rounded mb-2" style="max-width:200px">`
+          : ""
+        }
 
-        <p class="mt-2 fw-bold text-success d-none" id="kunci-${i}">
-          ✅ Jawaban Benar: ${item.jawaban}
+        ${item.opsi.map((o)=>
+          `<label class="d-block my-1">
+            <input type="radio" name="opsi-${i}" value="${o}"> ${o}
+          </label>`
+        ).join("")}
+        
+        <p class="mt-2 fw-bold text-danger d-none" id="kunci-${i}">
+          Jawaban: ${item.jawaban}
         </p>
       </div>
     `;
@@ -67,6 +68,7 @@ function renderSoal(){
 
   document.getElementById("quiz-area").innerHTML = html;
 }
+
 
 renderSoal();
 
