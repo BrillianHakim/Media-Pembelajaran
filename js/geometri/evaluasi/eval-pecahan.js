@@ -172,9 +172,10 @@ function tampilkanRekap() {
 
   document.getElementById("rekap-container").classList.remove("d-none");
 
-  // === Render MathJax setelah rekap muncul ===
+  // ✅ Render MathJax setelah update tabel
   if (window.MathJax) {
     MathJax.typesetPromise();
   }
 }
+
 

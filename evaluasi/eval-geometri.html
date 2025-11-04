@@ -53,7 +53,7 @@
               <th>Kunci Jawaban</th>
               <th>Skor</th>
               <th>Perhitungan Nilai (Skor × 10)</th>
-              <th>Penyelesaian</th>
+              
             </tr>
           </thead>
           <tbody id="rekap-body"></tbody>
@@ -248,7 +248,7 @@ function tampilkanRekap(rows,totalSkor){
         <td>${r.kunci}</td>
         <td>${r.skor}</td>
         <td>${r.nilai}</td>
-        <td><pre style="white-space:pre-wrap;text-align:left;margin:0">${r.solusi}</pre></td>
+        
       </tr>`;
   });
   tbody.innerHTML=html;
