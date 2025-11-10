@@ -409,8 +409,8 @@ function hitungSkorPerLatihan(latihanKe) {
 ********************************/
 
 // AUDIO
-const audioBenar = new Audio("/assets/BENAR.mp3");
-const audioSalah = new Audio("/assets/SALAH.mp3");
+const audioBenar = new Audio("../assets/BENAR.mp3");
+const audioSalah = new Audio("../assets/SALAH.mp3");
 
 audioBenar.volume = 1;
 audioSalah.volume = 1;
