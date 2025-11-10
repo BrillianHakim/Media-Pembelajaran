@@ -134,33 +134,33 @@ function shuffle(arr){
 let soalList = [
   /********* LATIHAN 1 — HOTS PECAHAN PENJUMLAHAN (1–5) *********/
   {
-    sub: "Latihan 1 — Pecahan Penjumlahan",
+    sub: "LKPD 1 — Pecahan Penjumlahan",
     soal: "Hasil dari \\( \\frac{2}{5} \\) + \\( \\frac{3}{10} \\) adalah...",
     opsi: shuffle(["\\( \\frac{7}{10} \\)", "\\( \\frac{1}{2} \\)", "\\( \\frac{9}{10} \\)", "\\( \\frac{5}{8} \\)"]),
     jawaban: "\\( \\frac{7}{10} \\)",
     img: "../assets/img/2.png"
   },
   {
-    sub: "Latihan 1 — Pecahan Penjumlahan",
+    sub: "LKPD 1 — Pecahan Penjumlahan",
     soal: "Hasil dari 1\\( \\frac{1}{3} \\) + 2\\( \\frac{2}{5} \\) adalah...",
     opsi: shuffle(["3\\( \\frac{11}{15} \\)", "3\\( \\frac{7}{15} \\)", "3\\( \\frac{3}{5} \\)", "3\\( \\frac{2}{15} \\)"]),
     jawaban: "3\\( \\frac{11}{15} \\)"
   },
   {
-    sub: "Latihan 1 — Pecahan Penjumlahan",
+    sub: "LKPD 1 — Pecahan Penjumlahan",
     soal: "Hasil dari \\( \\frac{7}{8} \\) + \\( \\frac{3}{4} \\) adalah...",
     opsi: shuffle(["\\( \\frac{13}{8} \\)", "\\( \\frac{5}{4} \\)", "\\( \\frac{7}{4} \\)", "\\( \\frac{11}{8} \\)"]),
     jawaban: "\\( \\frac{13}{8} \\)"
   },
   {
-    sub: "Latihan 1 — Pecahan Penjumlahan",
+    sub: "LKPD 1 — Pecahan Penjumlahan",
     soal: "Sebuah pizza dimakan \\( \\frac{1}{3} \\) bagian oleh Ali dan \\( \\frac{1}{4} \\) bagian oleh Budi. Berapa bagian pizza yang telah dimakan?",
     opsi: shuffle(["\\( \\frac{7}{12} \\)", "\\( \\frac{1}{2} \\)", "\\( \\frac{2}{3} \\)", "\\( \\frac{5}{12} \\)"]),
     jawaban: "\\( \\frac{7}{12} \\)",
     img: "../assets/img/pizzamakan.jpg"
   },
   {
-    sub: "Latihan 1 — Pecahan Penjumlahan",
+    sub: "LKPD 1 — Pecahan Penjumlahan",
     soal: "Jumlah dari \\( \\frac{3}{10} \\) + \\( \\frac{2}{5} \\) + \\( \\frac{1}{2} \\) adalah...",
     opsi: shuffle(["\\( \\frac{6}{5} \\)", "\\( \\frac{13}{10} \\)", "\\( \\frac{12}{10} \\)", "\\( \\frac{11}{10} \\)"]),
     jawaban: "\\( \\frac{13}{10} \\)"
@@ -168,63 +168,68 @@ let soalList = [
 
   /********* LATIHAN 2 — HOTS PECAHAN PENGURANGAN (6–10) *********/
   {
-    sub: "Latihan 2 — Pecahan Pengurangan",
+    sub: "LKPD 2 — Pecahan Pengurangan",
     soal: "Hasil dari \\( \\frac{5}{6} \\) - \\( \\frac{1}{4} \\) adalah...",
     opsi: shuffle(["\\( \\frac{7}{12} \\)", "\\( \\frac{3}{8} \\)", "\\( \\frac{5}{8} \\)", "\\( \\frac{2}{3} \\)"]),
-    jawaban: "\\( \\frac{7}{12} \\)"
+    jawaban: "\\( \\frac{7}{12} \\)",
+    img: "../assets/img/44.JPG"
   },
   {
-    sub: "Latihan 2 — Pecahan Pengurangan",
+    sub: "LKPD 2 — Pecahan Pengurangan",
     soal: "Hasil dari 2\\( \\frac{3}{4} \\) - 1\\( \\frac{2}{5} \\) adalah...",
     opsi: shuffle(["1\\( \\frac{7}{20} \\)", "1\\( \\frac{3}{10} \\)", "1\\( \\frac{1}{4} \\)", "1\\( \\frac{9}{20} \\)"]),
     jawaban: "1\\( \\frac{7}{20} \\)"
   },
   {
-    sub: "Latihan 2 — Pecahan Pengurangan",
+    sub: "LKPD 2 — Pecahan Pengurangan",
     soal: "Hasil dari \\( \\frac{9}{10} \\) - \\( \\frac{3}{5} \\) adalah...",
     opsi: shuffle(["\\( \\frac{3}{10} \\)", "\\( \\frac{1}{5} \\)", "\\( \\frac{2}{5} \\)", "\\( \\frac{1}{2} \\)"]),
-    jawaban: "\\( \\frac{3}{10} \\)"
+    jawaban: "\\( \\frac{3}{10} \\)",
+    img: "../assets/img/9.png"
   },
   {
-    sub: "Latihan 2 — Pecahan Pengurangan",
+    sub: "LKPD 2 — Pecahan Pengurangan",
     soal: "Ali memiliki \\( \\frac{7}{8} \\) liter air. Ia menggunakan \\( \\frac{3}{8} \\) liter untuk menyiram tanaman. Sisa air Ali adalah...",
     opsi: shuffle(["\\( \\frac{1}{2} \\) liter", "\\( \\frac{3}{4} \\) liter", "\\( \\frac{5}{8} \\) liter", "\\( \\frac{4}{8} \\) liter"]),
     jawaban: "\\( \\frac{1}{2} \\) liter"
   },
   {
-    sub: "Latihan 2 — Pecahan Pengurangan",
+    sub: "LKPD 2 — Pecahan Pengurangan",
     soal: "Hasil dari 5\\( \\frac{2}{3} \\) - 3\\( \\frac{3}{5} \\) adalah...",
     opsi: shuffle(["2\\( \\frac{1}{15} \\)", "2\\( \\frac{2}{5} \\)", "1\\( \\frac{4}{5} \\)", "1\\( \\frac{1}{15} \\)"]),
-    jawaban: "2\\( \\frac{1}{15} \\)"
+    jawaban: "2\\( \\frac{1}{15} \\)",
+    img: "../assets/img/Jeruk.png"
   },
 
   /********* LATIHAN 3 — HOTS PECAHAN CAMPURAN (PENJUMLAHAN & PENGURANGAN) (11–15) *********/
   {
-    sub: "Latihan 3 — Pecahan Campuran",
+    sub: "LKPD 3 — Pecahan Campuran",
     soal: "Hasil dari 2\\( \\frac{1}{2} \\) + \\( \\frac{3}{4} \\) - \\( \\frac{2}{5} \\) adalah...",
     opsi: shuffle(["2\\( \\frac{17}{20} \\)", "3\\( \\frac{1}{10} \\)", "3\\( \\frac{3}{20} \\)", "2\\( \\frac{7}{10} \\)"]),
     jawaban: "2\\( \\frac{17}{20} \\)"
   },
   {
-    sub: "Latihan 3 — Pecahan Campuran",
+    sub: "LKPD 3 — Pecahan Campuran",
     soal: "Hasil dari \\( \\frac{5}{6} \\) + \\( \\frac{3}{4} \\) - \\( \\frac{1}{2} \\) adalah...",
     opsi: shuffle(["\\( \\frac{13}{12} \\)", "\\( \\frac{9}{10} \\)", "\\( \\frac{11}{12} \\)", "\\( \\frac{7}{8} \\)"]),
-    jawaban: "\\( \\frac{13}{12} \\)"
+    jawaban: "\\( \\frac{13}{12} \\)",
+    img: "../assets/img/Hasil Dari.png"
   },
   {
-    sub: "Latihan 3 — Pecahan Campuran",
+    sub: "LKPD 3 — Pecahan Campuran",
     soal: "Sebuah tangki diisi \\( \\frac{3}{5} \\) bagian air. Kemudian ditambah \\( \\frac{2}{10} \\) bagian lagi dan digunakan \\( \\frac{1}{5} \\) bagian. Sekarang tangki berisi...",
     opsi: shuffle(["\\( \\frac{1}{2} \\)", "\\( \\frac{4}{5} \\)", "\\( \\frac{3}{4} \\)", "\\( \\frac{7}{10} \\)"]),
     jawaban: "\\( \\frac{7}{10} \\)"
   },
   {
-    sub: "Latihan 3 — Pecahan Campuran",
+    sub: "LKPD 3 — Pecahan Campuran",
     soal: "Dari \\( \\frac{7}{8} \\) meter kain digunakan \\( \\frac{3}{10} \\) meter untuk membuat pita dan \\( \\frac{1}{4} \\) meter untuk menghias topi. Sisa kain adalah...",
     opsi: shuffle(["\\( \\frac{23}{40} \\) meter", "\\( \\frac{3}{8} \\) meter", "\\( \\frac{11}{40} \\) meter", "\\( \\frac{1}{2} \\) meter"]),
-    jawaban: "\\( \\frac{23}{40} \\) meter"
+    jawaban: "\\( \\frac{23}{40} \\) meter",
+    img: "../assets/img/Pita.jpg"
   },
   {
-    sub: "Latihan 3 — Pecahan Campuran",
+    sub: "LKPD 3 — Pecahan Campuran",
     soal: "Hasil dari 4\\( \\frac{1}{3} \\) - 2\\( \\frac{1}{6} \\) + \\( \\frac{3}{4} \\) adalah...",
     opsi: shuffle(["3", "2\\( \\frac{11}{12} \\)", "3\\( \\frac{1}{2} \\)", "2\\( \\frac{5}{6} \\)"]),
     jawaban: "2\\( \\frac{11}{12} \\)"
@@ -282,17 +287,19 @@ function renderLatihan(latihanKe) {
     }
     
     let opsiHTML = "";
-    item.opsi.forEach((pil) => {
-      // escape single quote in opsi just in case
-      const safePil = pil.replace(/'/g, "\\'");
-      opsiHTML += `
-        <div class="form-check">
-          <input class="form-check-input" type="radio" 
-                 name="soal-${nomorSoal}" value="${pil}" 
-                 onchange="simpanJawaban(${nomorSoal - 1}, '${safePil}')">
-          <label class="form-check-label">${pil}</label>
-        </div>`;
-    });
+    item.opsi.forEach((pil, optIdx) => {
+  // escape double quotes untuk atribut value HTML
+  const htmlValue = pil.replace(/"/g, '&quot;');
+
+  opsiHTML += `
+    <div class="form-check">
+      <input class="form-check-input" type="radio" 
+             name="soal-${nomorSoal}" value="${htmlValue}" 
+             onchange="simpanJawaban(${nomorSoal - 1}, this.value)">
+      <label class="form-check-label">${pil}</label>
+    </div>`;
+});
+
     
     quizHTML += `
       <div class="section-box mb-4">
@@ -335,34 +342,62 @@ function wrapForMathjax(s) {
   if (/\\\(|\\\)|^\$.*\$/.test(s)) return s;
   return `\\(${s}\\)`;
 }
+// Normalizer untuk perbandingan (tetap simpan versi raw LaTeX untuk ditampilkan)
+function normalizeFraction(str) {
+  if (!str) return null;
+  str = String(str).replace(/\\\(|\\\)|\$/g, "").replace(/\s+/g, "");
 
+  // jika ada bentuk a/b
+  let m = str.match(/(\d+)\/(\d+)/);
+  if (m) return `${m[1]}/${m[2]}`;
 
+  // jika ada \frac{a}{b} atau frac{a}{b}
+  m = str.match(/(?:\\?frac)?\{?(\d+)\}?\s*\{?\s*\/?\s*\}?\{?(\d+)\}?/i);
+  if (m && m[1] && m[2]) return `${m[1]}/${m[2]}`;
 
-function normalizeLatex(str) {
-  if (!str) return "";
-  return String(str)
-    .replace(/\\\\+/g, "")      // hapus semua backslashes
-    .replace(/\\\\\(|\\\\\)/g, "")
-    .replace(/\$/g, "")
-    .replace(/\s+/g, "")
-    .replace(/[\{\}]/g, "")
-    .replace(/frac/g, "frac") // keep token name consistent
-    .replace(/[^a-z0-9]/gi, "") // hapus char selain alnum untuk strict match
-    .trim()
-    .toLowerCase();
+  // mixed number: 3\frac{1}{2} atau 3 1/2
+  m = str.match(/(\d+).*?(?:\\?frac)?\{?(\d+)\}?\s*\/\s*\{?(\d+)\}?/i);
+  if (m && m[1] && m[2] && m[3]) return `${m[1]} ${m[2]}/${m[3]}`;
+
+  return str;
 }
 
-function simpanJawaban(index, jawaban) {
-  const raw = String(jawaban || "")
-    .replace(/\\\(|\\\)|\$/g, "")   // hapus \( \) atau $
+// alias sementara agar semua pemanggilan lama tidak error
+const normalizeLatex = normalizeFraction;
+
+function simpanJawaban(index, jawabanOpsiAsli) {
+  // validasi index
+  if (typeof index !== 'number' || index < 0 || index >= jawabanUser.length) {
+    console.warn('simpanJawaban: index tidak valid', index);
+    return;
+  }
+
+  // SIMPAN VERSI ASLI untuk dipakai menampilkan (MathJax)
+  // jawabanOpsiAsli contoh: "\\( \\frac{7}{10} \\)" atau "\(\frac{7}{10}\)"
+  jawabanUserRaw[index] = String(jawabanOpsiAsli || "").trim();
+
+  // VERSI BERSIH untuk perbandingan (hapus wrapper \( \) / $ $, tapi biarkan \frac)
+  const cleaned = String(jawabanOpsiAsli || "")
+    .replace(/\\\(|\\\)|\$/g, "") // hapus pembungkus LaTeX
     .trim();
 
-  jawabanUserRaw[index] = raw;
-  jawabanUser[index] = normalizeLatex(raw);
+  jawabanUser[index] = normalizeFraction(cleaned); // contohnya "7/10" atau "3 11/15"
+
+  // aktifkan tombol selesai/lihat hasil jika ada minimal 1 jawaban
+  const anyAnswered = jawabanUserRaw.some(v => v && v.length > 0);
+  const btnSelesai = document.getElementById("btnSelesai");
+  const btnLihatHasil = document.getElementById("btnLihatHasil");
+  if (btnSelesai) btnSelesai.disabled = !anyAnswered;
+  if (btnLihatHasil) btnLihatHasil.disabled = !anyAnswered;
+
+  // debug: tampilkan raw & normalized ke console
+  console.log(`jawaban[${index}] = raw: '${jawabanUserRaw[index]}'  normalized: '${jawabanUser[index]}'`);
+
+  // render ulang MathJax agar jawaban yang tampil diperbarui
+  if (window.MathJax && window.MathJax.typesetPromise) {
+    MathJax.typesetPromise().catch(err => console.warn("MathJax render err:", err));
+  }
 }
-
-
-
 function lanjutKeLatihan(latihanBerikutnya) {
   currentLatihan = latihanBerikutnya;
   renderLatihan(latihanBerikutnya);
@@ -372,8 +407,8 @@ function hitungHasilAkhir() {
   skorTotal = 0; // reset dulu agar tidak menumpuk jika tombol ditekan berkali-kali
 
   for (let i = 0; i < 15; i++) {
-    const userNorm = normalizeLatex(jawabanUserRaw[i]);     // normalisasi jawaban user (raw)
-    const benarNorm = normalizeLatex(soalList[i].jawaban); // normalisasi jawaban benar (dari soalList)
+    const userNorm = normalizeFraction(jawabanUser[i]);
+const benarNorm = normalizeFraction(soalList[i].jawaban);
 
     // debug (bisa comment saat deploy)
     // console.log(i+1, userNorm, benarNorm);
@@ -523,4 +558,10 @@ function renderMath() {
   } else {
     console.warn("⚠️ MathJax belum dimuat di halaman ini.");
   }
+}
+
+function wrapForMathjax(s) {
+  if (!s) return "-";
+  if (/\\\(|\\\)|^\$.*\$/.test(s)) return s; // sudah termasuk wrapper
+  return `\\(${s}\\)`;
 }

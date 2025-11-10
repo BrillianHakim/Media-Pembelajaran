@@ -3,66 +3,108 @@
 ********************************/
 let soalList = [
 
-  // PENJUMLAHAN & PENGURANGAN
+  // ✅ HOTS Penjumlahan & Pengurangan Pecahan
   { 
-    soal: "\\( \\frac{12}{15} + \\frac{2}{15} = \\dots \\)", 
-    opsi: ["\\( \\frac{10}{15} \\)","\\( \\frac{13}{15} \\)","\\( \\frac{14}{15} \\)","\\( \\frac{15}{15} \\)"], 
-    jawaban: "\\( \\frac{14}{15} \\)" 
+    soal: "Ibu menggunakan \\( \\frac{3}{8} \\) kg gula untuk membuat kue dan \\( \\frac{1}{4} \\) kg untuk membuat puding. Berapa kg gula yang digunakan seluruhnya?",
+    img: "../assets/img/gula.jpg",
+    opsi: ["\\( \\frac{5}{8} \\)","\\( \\frac{1}{2} \\)","\\( \\frac{7}{8} \\)","\\( \\frac{3}{4} \\)"],
+    jawaban: "\\( \\frac{5}{8} \\)"
   },
   { 
-    soal: "\\( \\frac{17}{20} + \\frac{1}{20} = \\dots \\)", 
-    opsi: ["\\( \\frac{9}{10} \\)","\\( \\frac{18}{20} \\)","\\( \\frac{19}{20} \\)","\\( \\frac{20}{20} \\)"], 
-    jawaban: "\\( \\frac{9}{10} \\)" 
+    soal: "Sebuah pita panjangnya \\( 1\\frac{1}{2} \\) m. Telah digunakan \\( \\frac{3}{4} \\) m. Sisa pita adalah ...",
+    
+    opsi: ["\\( \\frac{3}{4} \\) m","\\( \\frac{5}{4} \\) m","\\( \\frac{1}{2} \\) m","\\( \\frac{2}{3} \\) m"],
+    jawaban: "\\( \\frac{3}{4} \\) m"
   },
   { 
-    soal: "\\( \\frac{9}{18} + \\frac{4}{24} = \\dots \\)", 
-    opsi: ["\\( \\frac{12}{18} \\)","\\( \\frac{11}{24} \\)","\\( \\frac{2}{3} \\)","\\( \\frac{5}{6} \\)"], 
-    jawaban: "\\( \\frac{2}{3} \\)" 
-  },
-  { 
-    soal: "\\( \\frac{19}{21} - \\frac{7}{21} = \\dots \\)", 
-    opsi: ["\\( \\frac{13}{21} \\)","\\( \\frac{12}{21} \\)","\\( \\frac{4}{7} \\)","\\( \\frac{2}{3} \\)"], 
-    jawaban: "\\( \\frac{4}{7} \\)" 
-  },
-  { 
-    soal: "\\( \\frac{16}{25} - \\frac{4}{25} = \\dots \\)", 
-    opsi: ["\\( \\frac{10}{25} \\)","\\( \\frac{11}{25} \\)","\\( \\frac{12}{25} \\)","\\( \\frac{13}{25} \\)"], 
-    jawaban: "\\( \\frac{12}{25} \\)" 
-  },
-  { 
-    soal: "\\( \\frac{15}{20} - \\frac{6}{15} = \\dots \\)", 
-    opsi: ["\\( \\frac{7}{20} \\)","\\( \\frac{1}{2} \\)","\\( \\frac{2}{5} \\)","\\( \\frac{3}{5} \\)"], 
-    jawaban: "\\( \\frac{7}{20} \\)" 
+    soal: "Ayah membeli \\( \\frac{5}{6} \\) liter bensin. Sesampainya di rumah tersisa \\( \\frac{1}{3} \\) liter. Berapa liter bensin yang digunakan?",
+    img: "../assets/img/Jerigen.webp",
+    opsi: ["\\( \\frac{1}{6} \\)","\\( \\frac{1}{2} \\)","\\( \\frac{2}{3} \\)","\\( \\frac{3}{6} \\)"],
+    jawaban: "\\( \\frac{1}{2} \\)"
   },
 
-  // SOAL CERITA
-  { 
-    soal: "Toples berisi \\( \\frac{12}{18} \\) permen stroberi dan \\( \\frac{5}{18} \\) anggur. Total = ", 
-    opsi: ["\\( \\frac{15}{18} \\)","\\( \\frac{16}{18} \\)","\\( \\frac{17}{18} \\)","\\( \\frac{18}{18} \\)"], 
-    jawaban: "\\( \\frac{17}{18} \\)" 
+  // ✅ HOTS Perbandingan Situasional
+  {
+    soal: "Udin minum \\( \\frac{2}{5} \\) botol air. Budi minum \\( \\frac{3}{10} \\) botol air. Siapa yang lebih banyak dan berapa selisihnya?",
+    
+    opsi: [
+      "Udin, selisih \\( \\frac{1}{10} \\)",
+      "Udin, selisih \\( \\frac{1}{5} \\)",
+      "Budi, selisih \\( \\frac{1}{10} \\)",
+      "Sama banyak"
+    ],
+    jawaban: "Udin, selisih \\( \\frac{1}{10} \\)"
   },
-  { 
-    soal: "Deni membaca \\( \\frac{9}{15} \\) pagi dan \\( \\frac{6}{20} \\) malam. Total = ", 
-    opsi: ["\\( \\frac{3}{5} \\)","\\( \\frac{9}{10} \\)","\\( \\frac{5}{6} \\)","\\( \\frac{7}{8} \\)"], 
-    jawaban: "\\( \\frac{9}{10} \\)" 
+  {
+    soal: "Sebuah taman terisi air hingga \\( \\frac{7}{12} \\) bagian. Setelah disiramkan ke tanaman, tinggal \\( \\frac{1}{3} \\) bagian. Berapa bagian air yang digunakan?",
+    
+    opsi: [
+      "\\( \\frac{1}{12} \\)",
+      "\\( \\frac{1}{6} \\)",
+      "\\( \\frac{3}{12} \\)",
+      "\\( \\frac{1}{4} \\)"
+    ],
+    jawaban: "\\( \\frac{1}{4} \\)"
   },
-  { 
-    soal: "Tangki berisi \\( \\frac{18}{24} \\) air, berkurang \\( \\frac{5}{24} \\). Sisa = ", 
-    opsi: ["\\( \\frac{10}{24} \\)","\\( \\frac{11}{24} \\)","\\( \\frac{12}{24} \\)","\\( \\frac{13}{24} \\)"], 
-    jawaban: "\\( \\frac{13}{24} \\)" 
-  },
-  { 
-  soal: "Pedagang punya \\( \\dfrac{14}{21} \\) ton, jual \\( \\dfrac{6}{18} \\) ton. Sisa = ", 
-  opsi: [
-    "\\( \\dfrac{1}{4}\\;\\text{Ton} \\)",
-    "\\( \\dfrac{1}{3}\\;\\text{Ton} \\)",
-    "\\( \\dfrac{1}{2}\\;\\text{Ton} \\)",
-    "\\( \\dfrac{2}{3}\\;\\text{Ton} \\)"
-  ], 
-  jawaban: "\\( \\dfrac{1}{3}\\;\\text{Ton} \\)" 
-},
 
+  // ✅ HOTS Kontekstual Bertahap
+  {
+    soal: "Lina memiliki sebatang cokelat. Ia makan \\( \\frac{1}{4} \\) bagian pagi dan \\( \\frac{2}{8} \\) bagian sore. Berapa bagian cokelat yang tersisa?",
+    img: "../assets/img/cokelat.jpg",
+    opsi: [
+      "\\( \\frac{1}{2} \\)",
+      "\\( \\frac{3}{8} \\)",
+      "\\( \\frac{4}{8} \\)",
+      "\\( \\frac{5}{8} \\)"
+    ],
+    jawaban: "\\( \\frac{3}{8} \\)"
+  },
+  {
+    soal: "Di perpustakaan ada \\( \\frac{2}{3} \\) rak berisi buku cerita. Setelah dipinjam siswa, tinggal \\( \\frac{1}{6} \\) rak. Bagian mana yang dipinjam siswa?",
+    
+    opsi: [
+      "\\( \\frac{1}{2} \\)",
+      "\\( \\frac{4}{6} \\)",
+      "\\( \\frac{1}{3} \\)",
+      "\\( \\frac{5}{6} \\)"
+    ],
+    jawaban: "\\( \\frac{1}{2} \\)"
+  },
+  {
+    soal: "Rita membeli roti. Ia memberikan \\( \\frac{3}{10} \\) kepada adiknya dan \\( \\frac{2}{5} \\) kepada kakaknya. Berapa bagian roti yang sudah diberikan?",
+    img: "../assets/img/Roti.avif",
+    opsi: [
+      "\\( \\frac{1}{2} \\)",
+      "\\( \\frac{4}{10} \\)",
+      "\\( \\frac{7}{10} \\)",
+      "\\( \\frac{5}{10} \\)"
+    ],
+    jawaban: "\\( \\frac{7}{10} \\)"
+  },
 
+  // ✅ Kombinasi Pecahan & Makna Konteks
+  {
+    soal: "Sebuah kolam terisi air \\( \\frac{3}{5} \\) bagian. Jika dinyalakan pompa dan menguras air sebanyak \\( \\frac{1}{10} \\) bagian, berapa bagian yang tersisa?",
+    
+    opsi: [
+      "\\( \\frac{2}{5} \\)",
+      "\\( \\frac{4}{10} \\)",
+      "\\( \\frac{1}{2} \\)",
+      "\\( \\frac{1}{10} \\)"
+    ],
+    jawaban: "\\( \\frac{1}{2} \\)"
+  },
+  {
+    soal: "Ibu membuat kue dan membagikannya: \\( \\frac{1}{3} \\) kepada tetangga dan \\( \\frac{1}{6} \\) kepada teman. Berapa bagian kue yang belum dibagikan?",
+    img: "../assets/img/Kue.jpg",
+    opsi: [
+      "\\( \\frac{1}{2} \\)",
+      "\\( \\frac{2}{6} \\)",
+      "\\( \\frac{3}{6} \\)",
+      "\\( \\frac{4}{6} \\)"
+    ],
+    jawaban: "\\( \\frac{1}{2} \\)"
+  }
 ];
 
 
@@ -76,15 +118,23 @@ let skor = 0;
 /*******************************
    RENDER
 ********************************/
-function renderSoal(){
+function renderSoal() {
   let html = "";
-  soalList.forEach((item,i)=>{
+  soalList.forEach((item, i) => {
     html += `
       <div id="soal-${i}" class="section-box">
-        <h6 class="fw-bold text-primary">Soal ${i+1}</h6>
+        <h6 class="fw-bold text-primary">Soal ${i + 1}</h6>
         <p>${item.soal}</p>
 
-        ${item.opsi.map((o)=>
+        ${item.img 
+          ? `<div class="text-center mb-4">
+               <img src="${item.img}" alt="Gambar Soal" 
+                    class="img-fluid rounded shadow soal-img">
+             </div>` 
+          : ""
+        }
+
+        ${item.opsi.map((o) =>
           `<div>
             <label>
               <input type="radio" name="opsi-${i}" value="${o}">
@@ -93,7 +143,6 @@ function renderSoal(){
           </div>`
         ).join("")}
 
-        <!-- jawaban muncul setelah selesai -->
         <p class="mt-2 fw-bold text-danger d-none" id="kunci-${i}">
           ✅ Jawaban: ${item.jawaban}
         </p>
@@ -102,7 +151,13 @@ function renderSoal(){
   });
 
   document.getElementById("quiz-area").innerHTML = html;
+
+  if (window.MathJax) {
+    MathJax.typesetPromise();
+  }
 }
+
+
 
 renderSoal();
 
@@ -138,7 +193,13 @@ function periksaSemua() {
   });
 
   let nilai = skor * 10;
-  document.getElementById("skorText").textContent = `Nilai Kamu: ${nilai}`;
+document.getElementById("skorText").textContent = `Nilai Kamu: ${nilai}`;
+
+// ✅ Pastikan suara tetap muncul meskipun salah semua
+try {
+  audioBenar.currentTime = 0;
+  audioBenar.play();
+} catch(e) {}
 
   // === TAMPILKAN REKAP ===
   tampilkanRekap();

@@ -6,31 +6,29 @@ let soalList = [
     soal: `Seorang siswa membuat hiasan kelas berbentuk kerucut dari karton. Jika jari-jari alas kerucut 7 cm dan garis pelukis 15 cm. Hitunglah luas selimut kerucut tersebut! (π = 22/7)`,
     opsi: ["330 cm²","350 cm²","440 cm²","210 cm²"],
     jawaban: "330 cm²",
-    img :"../assets/img/kerucut1.png"
+    img :"../assets/img/715.png"
   },
   {
     soal: `Sebuah es krim berbentuk kerucut memiliki jari-jari alas 4 cm dan tinggi 12 cm. Karena meleleh, es krim hanya terisi 3/4 bagian dari volume penuh. Berapa volume es krim tersebut? (π = 3,14)`,
     opsi: ["200,96 cm³","150,72 cm³","100,48 cm³","75,36 cm³"],
-    jawaban: "150,72 cm³",
-    img :"../assets/img/kerucut2.png"
+    jawaban: "150,72 cm³"
   },
   {
     soal: `Ibu membeli sebuah topi ulang tahun berbentuk kerucut. Tinggi topi 18 cm dan jari-jari alas 6 cm. Untuk menghias tepi alas topi menggunakan pita, berapa panjang pita minimal yang diperlukan?`,
     opsi: ["12π cm","18π cm","24π cm","36π cm"],
     jawaban: "12π cm",
-    img :"../assets/img/kerucut3.png"
+    img :"../assets/img/186.png"
   },
   {
     soal: `Di sekolah, sebuah kerucut digunakan sebagai corong air. Corong memiliki volume 314 cm³ dan jari-jari alas 5 cm. Berapa tinggi corong tersebut? (π = 3,14)`,
     opsi: ["6 cm","12 cm","15 cm","18 cm"],
-    jawaban: "12 cm",
-    img :"../assets/img/kerucut4.png"
+    jawaban: "12 cm"
   },
   {
     soal: `Sebuah tenda kecil berbentuk kerucut memiliki jari-jari alas 3 m dan tinggi 4 m. Seluruh bagian luar tenda ingin dicat. Berapa luas permukaan tenda yang harus dicat? (π = 3,14)`,
     opsi: ["56,52 m²","47,1 m²","37,68 m²","28,26 m²"],
     jawaban: "56,52 m²",
-    img :"../assets/img/kerucut5.png"
+    img :"../assets/img/cut.png"
   }
 ];
 
@@ -54,7 +52,16 @@ function renderSoal(){
 
         ${
           item.img
-          ? `<img src="${item.img}" class="img-fluid rounded mb-2" style="max-width:200px">`
+          ? `
+          <div class="text-center mb-3">
+            <img 
+              src="${item.img}" 
+              alt="gambar soal" 
+              class="img-fluid rounded shadow"
+              style="max-width: 220px; height: auto; object-fit: contain;"
+            >
+          </div>
+          `
           : ""
         }
 
@@ -74,17 +81,14 @@ function renderSoal(){
   document.getElementById("quiz-area").innerHTML = html;
 }
 
-
 /*******************************
    PERIKSA SEMUA
 ********************************/
 function periksaSemua(){
-
   skor = 0;
   const audioBenar = document.getElementById("audioBenar");
 
   soalList.forEach((item,i)=>{
-
     let selected = document.querySelector(`input[name="opsi-${i}"]:checked`);
     let box = document.getElementById(`soal-${i}`);
     let kunci = document.getElementById(`kunci-${i}`);
@@ -100,8 +104,6 @@ function periksaSemua(){
     if(selected.value === item.jawaban){
       skor++;
       box.classList.add("benar-anim");
-      audioBenar.currentTime = 0;
-      audioBenar.play();
     } else {
       box.classList.add("salah-anim");
     }
@@ -109,6 +111,10 @@ function periksaSemua(){
 
   let nilai = skor * 20;
   document.getElementById("skorText").textContent = `Nilai Kamu: ${nilai}`;
+
+  // ✅ Putar suara meskipun salah semua
+  audioBenar.currentTime = 0;
+  audioBenar.play();
 }
 
 renderSoal();

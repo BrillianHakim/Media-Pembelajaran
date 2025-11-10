@@ -35,7 +35,7 @@ function shuffle(arr){
 let soalList = [
   /********* LATIHAN 1 — LUAS KERUCUT (1-5) *********/
   {
-    sub: "Latihan 1 — Luas Kerucut",
+    sub: "LKPD 1 — Luas Kerucut",
     soal: "Rumus untuk menghitung luas permukaan sebuah kerucut (gabungan dari luas alas dan selimut) yang benar adalah...",
     opsi: shuffle([
       "π × r × (r + s)",
@@ -46,28 +46,28 @@ let soalList = [
     jawaban: "π × r × (r + s)"
   },
   {
-    sub: "Latihan 1 — Luas Kerucut",
+    sub: "LKPD 1 — Luas Kerucut",
     soal: "Sebuah kerucut memiliki jari-jari 7 cm dan garis pelukis 10 cm. Jika digunakan kertas untuk menutup seluruh permukaannya, luas kertas minimal yang dibutuhkan adalah... (π = 3.14)",
     opsi: shuffle(["373,66 cm²", "314 cm²", "471 cm²", "220 cm²"]),
     jawaban: "373,66 cm²",
     img: "../assets/img/tt.png"
   },
   {
-    sub: "Latihan 1 — Luas Kerucut",
+    sub: "LKPD 1 — Luas Kerucut",
     soal: "Seorang siswa ingin menghias topi ulang tahun berbentuk kerucut hanya pada bagian selimutnya. Rumus yang digunakan untuk mencari luas selimut adalah...",
     opsi: shuffle(["π × r × s", "π × r²", "\\( \\frac{1}{2} \\) × π × r × s", "2 × π × r × t"]),
     jawaban: "π × r × s",
     img: "../assets/img/TopiUltah.png"
   },
   {
-    sub: "Latihan 1 — Luas Kerucut",
+    sub: "LKPD 1 — Luas Kerucut",
     soal: "Jika jari-jari kerucut 10 cm dan garis pelukis 15 cm, berapa luas kertas yang diperlukan untuk menutupi seluruh sisi selimutnya? (π = 3.14)",
     opsi: shuffle(["471 cm²", "314 cm²", "706,5 cm²", "235,5 cm²"]),
     jawaban: "471 cm²",
     img: "../assets/img/Sr.png"
   },
   {
-    sub: "Latihan 1 — Luas Kerucut",
+    sub: "LKPD 1 — Luas Kerucut",
     soal: "Sebuah kerucut memiliki luas alas 154 cm² dan luas selimut 308 cm². Jika bagian alas akan dicat warna biru dan selimut warna merah, berapakah total luas permukaan yang akan dicat?",
     opsi: shuffle(["462 cm²", "154 cm²", "308 cm²", "616 cm²"]),
     jawaban: "462 cm²",
@@ -76,38 +76,38 @@ let soalList = [
 
   /********* LATIHAN 2 — VOLUME KERUCUT (6-10) *********/
   {
-    sub: "Latihan 2 — Volume Kerucut",
-    soal: "Rumus volume kerucut yang menunjukkan bahwa kerucut memiliki volume sepertiga dari tabung dengan ukuran sama adalah...",
-    opsi: shuffle([
-      "\\( \\frac{1}{3} \\) × π × r² × t",
-      "π × r² × t",
-      "\\( \\frac{1}{2} \\) × π × r² × t",
-      "\\( \\frac{2}{3} \\) × π × r² × t"
-    ]),
-    jawaban: "\\( \\frac{1}{3} \\) × π × r² × t"
-  },
+  sub: "LKPD 2 — Volume Kerucut",
+  soal: "Sebuah kerucut memiliki diameter 14 cm dan tinggi 12 cm. Volume kerucut tersebut adalah ... cm³ (π = 22/7)",
+  opsi: shuffle([
+    "616",
+    "924", 
+    "1.232",
+    "1.848"
+  ]),
+  jawaban: "616"
+},
   {
-    sub: "Latihan 2 — Volume Kerucut",
+    sub: "LKPD 2 — Volume Kerucut",
     soal: "Sebuah kerucut memiliki jari-jari 7 cm dan tinggi 14 cm. Jika kamu ingin membuatnya dari pasir, berapa banyak pasir yang dibutuhkan? (Gunakan π = 3.14)",
     opsi: shuffle(["718,67 cm³", "1.078 cm³", "359,33 cm³", "2.156 cm³"]),
     jawaban: "718,67 cm³",
     img: "../assets/img/14.png"
   },
   {
-    sub: "Latihan 2 — Volume Kerucut",
+    sub: "LKPD 2 — Volume Kerucut",
     soal: "Volume sebuah kerucut adalah hasil dari \\( \\frac{1}{3} \\) luas alas dikalikan tinggi. Jika jari-jari 3 cm dan tinggi 4 cm, maka volume kerucut tersebut adalah... (π = 3.14)",
     opsi: shuffle(["37,68 cm³", "113,04 cm³", "75,36 cm³", "18,84 cm³"]),
     jawaban: "37,68 cm³",
     img: "../assets/img/sip.png"
   },
   {
-    sub: "Latihan 2 — Volume Kerucut",
+    sub: "LKPD 2 — Volume Kerucut",
     soal: "Sebuah wadah berbentuk kerucut dapat menampung air sebanyak 1.570 cm³. Jika jari-jarinya 10 cm, tentukan tinggi wadah tersebut! (π = 3.14)",
     opsi: shuffle(["15 cm", "10 cm", "20 cm", "5 cm"]),
     jawaban: "15 cm"
   },
   {
-    sub: "Latihan 2 — Volume Kerucut",
+    sub: "LKPD 2 — Volume Kerucut",
     soal: "Volume kerucut adalah \\( \\frac{1}{3} \\) dari volume tabung dengan ukuran sama. Jika volume tabung 1.200 cm³, maka volume kerucut tersebut adalah...",
     opsi: shuffle(["400 cm³", "600 cm³", "800 cm³", "1.200 cm³"]),
     jawaban: "400 cm³"
@@ -115,35 +115,35 @@ let soalList = [
 
   /********* LATIHAN 3 — SOAL CERITA CAMPURAN (11-15) *********/
   {
-    sub: "Latihan 3 — Soal Cerita Campuran",
+    sub: "LKPD 3 — Soal Cerita Campuran",
     soal: "Andi membuat topi ulang tahun berbentuk kerucut dari karton. Jika jari-jari alas 7 cm dan garis pelukis 10 cm, berapa luas karton yang dibutuhkan untuk satu topi?",
     opsi: shuffle(["373,66 cm²", "314 cm²", "220 cm²", "471 cm²"]),
     jawaban: "373,66 cm²",
     img: "../assets/img/11 Topi Ulang Tahun.webp"
   },
   {
-    sub: "Latihan 3 — Soal Cerita Campuran",
+    sub: "LKPD 3 — Soal Cerita Campuran",
     soal: "Sebuah corong air berbentuk kerucut memiliki jari-jari 3 cm dan tinggi 4 cm. Jika corong tersebut penuh air, berapa banyak air (dalam cm³) yang dapat ditampung?",
     opsi: shuffle(["37,68 cm³", "50 cm³", "75 cm³", "100 cm³"]),
     jawaban: "37,68 cm³",
     img: "../assets/img/sip.png"
   },
   {
-    sub: "Latihan 3 — Soal Cerita Campuran",
+    sub: "LKPD 3 — Soal Cerita Campuran",
     soal: "Tenda berbentuk kerucut memiliki diameter 6 meter dan garis pelukis 4 meter. Jika bagian bawah tidak tertutup, berapa luas kain yang dibutuhkan untuk membuat tenda?",
     opsi: shuffle(["37,68 m²", "28,26 m²", "56,52 m²", "75,36 m²"]),
     jawaban: "37,68 m²",
     img: "../assets/img/TendaKerucut.png"
   },
   {
-    sub: "Latihan 3 — Soal Cerita Campuran",
+    sub: "LKPD 3 — Soal Cerita Campuran",
     soal: "Sebuah kerucut pasir memiliki volume 1.570 cm³ dan jari-jari 10 cm. Jika tinggi bertambah dua kali lipat, berapa volume baru yang terbentuk?",
     opsi: shuffle(["3.140 cm³", "1.570 cm³", "2.355 cm³", "4.710 cm³"]),
     jawaban: "3.140 cm³",
     img: "../assets/img/Kecut.png"
   },
   {
-    sub: "Latihan 3 — Soal Cerita Campuran",
+    sub: "LKPD 3 — Soal Cerita Campuran",
     soal: "Dua kerucut memiliki jari-jari sama tetapi tinggi berbeda. Jika tinggi kerucut A dua kali tinggi kerucut B, maka volume kerucut A dibanding B adalah...",
     opsi: shuffle(["2 : 1", "1 : 2", "4 : 1", "3 : 1"]),
     jawaban: "2 : 1",

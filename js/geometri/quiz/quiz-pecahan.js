@@ -1,34 +1,69 @@
 /*******************************
    DATA SOAL
 ********************************/
+/*******************************
+   DATA SOAL HOTS Pecahan + Gambar
+********************************/
 let soalList = [
   {
-    soal: "\\( \\frac{3}{8} + \\frac{2}{8} = \\dots \\)",
-    opsi: ["\\( \\frac{4}{8} \\)","\\( \\frac{5}{8} \\)","\\( \\frac{6}{8} \\)","\\( \\frac{7}{8} \\)"],
-    jawaban: "\\( \\frac{5}{8} \\)"
+    soal: "Ani makan \\( \\frac{2}{3} \\) bagian kue. Beni makan \\( \\frac{1}{4} \\) bagian kue yang sama. Berapa bagian kue yang dimakan mereka berdua?",
+    opsi: [
+      "\\( \\frac{7}{12} \\)",
+      "\\( \\frac{8}{12} \\)",
+      "\\( \\frac{11}{12} \\)",
+      "\\( \\frac{5}{6} \\)"
+    ],
+    jawaban: "\\( \\frac{11}{12} \\)"
   },
   {
-    soal: "\\( \\frac{5}{6} - \\frac{2}{6} = \\dots \\)",
-    opsi: ["\\( \\frac{2}{6} \\)","\\( \\frac{3}{6} \\)","\\( \\frac{4}{6} \\)","\\( \\frac{5}{6} \\)"],
-    jawaban: "\\( \\frac{3}{6} \\)"
+    soal: "Di kebun, \\( \\frac{3}{5} \\) bagian lahan ditanami sayur. Dari lahan tersebut, \\( \\frac{1}{3} \\) ditanami tomat. Berapa bagian seluruh lahan yang ditanami tomat?",
+    opsi: [
+      "\\( \\frac{1}{4} \\)",
+      "\\( \\frac{1}{5} \\)",
+      "\\( \\frac{3}{15} \\)",
+      "\\( \\frac{1}{6} \\)"
+    ],
+    jawaban: "\\( \\frac{1}{5} \\)"
   },
   {
-    soal: "Sinta mempunyai \\( \\frac{2}{5} \\) bagian kue coklat, lalu membeli lagi \\( \\frac{3}{10} \\) bagian. Total = \\dots",
-    opsi: ["\\( \\frac{4}{10} \\)","\\( \\frac{5}{10} \\)","\\( \\frac{7}{10} \\)","\\( \\frac{8}{10} \\)"],
-    jawaban: "\\( \\frac{7}{10} \\)"
+    soal: "Sebuah tangki berisi \\( \\frac{4}{7} \\) liter minyak. Setelah digunakan \\( \\frac{2}{7} \\) liter, sisa minyak adalah ...",
+    img: "../assets/img/tangki.png",
+    opsi: [
+      "\\( \\frac{1}{7} \\)",
+      "\\( \\frac{2}{7} \\)",
+      "\\( \\frac{3}{7} \\)",
+      "\\( \\frac{6}{7} \\)"
+    ],
+    jawaban: "\\( \\frac{2}{7} \\)"
   },
   {
-    soal: "Ibu mempunyai \\( \\frac{3}{4} \\) liter minyak, dipakai \\( \\frac{1}{8} \\) liter. Sisa = \\dots",
-    opsi: ["\\( \\frac{2}{8} \\)","\\( \\frac{4}{8} \\)","\\( \\frac{5}{8} \\)","\\( \\frac{6}{8} \\)"],
-    jawaban: "\\( \\frac{6}{8} \\)"
+    soal: "Dalam sebuah lomba, peserta pertama menempuh \\( \\frac{5}{8} \\) lintasan dan peserta kedua menempuh \\( \\frac{1}{4} \\) lintasan. Selisih jarak mereka adalah ...",
+    
+    opsi: [
+      "\\( \\frac{1}{8} \\)",
+      "\\( \\frac{2}{8} \\)",
+      "\\( \\frac{3}{8} \\)",
+      "\\( \\frac{7}{8} \\)"
+    ],
+    jawaban: "\\( \\frac{3}{8} \\)"
   },
   {
-    soal: "\\( \\frac{7}{12} + \\frac{5}{6} = \\dots \\)",
-    img: "../assets/img/GPT.png",
-    opsi: ["\\( \\frac{13}{12} \\)","\\( \\frac{14}{12} \\)","\\( \\frac{15}{12} \\)","\\( \\frac{17}{12} \\)"],
-    jawaban: "\\( \\frac{15}{12} \\)"
+    soal: "Ibu membeli \\( \\frac{7}{9} \\) kilogram gula. Digunakan \\( \\frac{2}{9} \\) untuk membuat kue dan \\( \\frac{1}{9} \\) untuk minuman. Sisa gula adalah ...",
+    img: "../assets/img/gula.jpg",
+    opsi: [
+      "\\( \\frac{5}{9} \\)",
+      "\\( \\frac{4}{9} \\)",
+      "\\( \\frac{3}{9} \\)",
+      "\\( \\frac{6}{9} \\)"
+    ],
+    jawaban: "\\( \\frac{4}{9} \\)"
   }
 ];
+
+/* acak opsi */
+function shuffle(arr){ return arr.sort(()=>Math.random()-0.5); }
+soalList.forEach(s=> s.opsi = shuffle(s.opsi) );
+
 
 
 /* acak opsi */
@@ -50,7 +85,16 @@ function renderSoal(){
 
         ${
           item.img
-          ? `<img src="${item.img}" class="img-fluid rounded mb-2" style="max-width:200px">`
+          ? `
+          <div class="text-center mb-3">
+            <img 
+              src="${item.img}" 
+              alt="gambar soal" 
+              class="img-fluid rounded shadow"
+              style="max-width: 220px; height: auto; object-fit: contain;"
+            >
+          </div>
+          `
           : ""
         }
 
@@ -70,27 +114,19 @@ function renderSoal(){
   document.getElementById("quiz-area").innerHTML = html;
 }
 
-
-renderSoal();
-
 /*******************************
    PERIKSA SEMUA
 ********************************/
 function periksaSemua(){
-
   skor = 0;
   const audioBenar = document.getElementById("audioBenar");
 
   soalList.forEach((item,i)=>{
-
     let selected = document.querySelector(`input[name="opsi-${i}"]:checked`);
     let box = document.getElementById(`soal-${i}`);
     let kunci = document.getElementById(`kunci-${i}`);
 
-    // reset animasi (biar bisa dipakai lagi)
     box.classList.remove("benar-anim","salah-anim");
-
-    // tampilkan kunci
     kunci.classList.remove("d-none");
 
     if(!selected){
@@ -101,8 +137,6 @@ function periksaSemua(){
     if(selected.value === item.jawaban){
       skor++;
       box.classList.add("benar-anim");
-      audioBenar.currentTime = 0;
-      audioBenar.play();
     } else {
       box.classList.add("salah-anim");
     }
@@ -110,5 +144,10 @@ function periksaSemua(){
 
   let nilai = skor * 20;
   document.getElementById("skorText").textContent = `Nilai Kamu: ${nilai}`;
+
+  // ✅ Putar suara meskipun salah semua
+  audioBenar.currentTime = 0;
+  audioBenar.play();
 }
 
+renderSoal();
