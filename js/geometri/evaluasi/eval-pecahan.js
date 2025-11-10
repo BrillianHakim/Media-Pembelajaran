@@ -96,7 +96,7 @@ let soalList = [
   },
   {
     soal: "Ibu membuat kue dan membagikannya: \\( \\frac{1}{3} \\) kepada tetangga dan \\( \\frac{1}{6} \\) kepada teman. Berapa bagian kue yang belum dibagikan?",
-    img: "../assets/img/Kue.jpg",
+    img: "../assets/img/kue.jpg",
     opsi: [
       "\\( \\frac{1}{2} \\)",
       "\\( \\frac{2}{6} \\)",
