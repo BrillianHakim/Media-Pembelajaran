@@ -3,33 +3,37 @@
 ********************************/
 let soalList = [
   {
-    soal: `Sebuah topi ulang tahun berbentuk kerucut memiliki jari-jari alas 10 cm dan garis pelukis 13 cm. Hitunglah luas kertas minimal untuk membuat selimut topi (tanpa alasnya).`,
-    opsi: ["130π cm²","100π cm²","65π cm²","113 cm²"],
-    jawaban: "130π cm²"
+    soal: `Seorang siswa membuat hiasan kelas berbentuk kerucut dari karton. Jika jari-jari alas kerucut 7 cm dan garis pelukis 15 cm. Hitunglah luas selimut kerucut tersebut! (π = 22/7)`,
+    opsi: ["330 cm²","350 cm²","440 cm²","210 cm²"],
+    jawaban: "330 cm²",
+    img :"../assets/img/kerucut1.png"
   },
   {
-    soal: `Sebuah wadah es krim berbentuk kerucut memiliki jari-jari alas 3 cm dan tinggi 12 cm. Berapa liter es krim yang dapat dimuat wadah tersebut? (1 liter = 1000 cm³)`,
-    opsi: ["0,1 liter","0,12 liter","0,11 liter","0,15 liter"],
-    jawaban: "0,11 liter"
+    soal: `Sebuah es krim berbentuk kerucut memiliki jari-jari alas 4 cm dan tinggi 12 cm. Karena meleleh, es krim hanya terisi 3/4 bagian dari volume penuh. Berapa volume es krim tersebut? (π = 3,14)`,
+    opsi: ["200,96 cm³","150,72 cm³","100,48 cm³","75,36 cm³"],
+    jawaban: "150,72 cm³",
+    img :"../assets/img/kerucut2.png"
   },
   {
-    soal: `Sebuah kerucut memiliki jari-jari alas 6 cm dan tinggi 9 cm. Berapakah volume kerucut tersebut?`,
-    opsi: ["324π cm³","108π cm³","216π cm³","162π cm³"],
-    img :"../assets/img/69.jpeg",
-    jawaban: "216π cm³"
+    soal: `Ibu membeli sebuah topi ulang tahun berbentuk kerucut. Tinggi topi 18 cm dan jari-jari alas 6 cm. Untuk menghias tepi alas topi menggunakan pita, berapa panjang pita minimal yang diperlukan?`,
+    opsi: ["12π cm","18π cm","24π cm","36π cm"],
+    jawaban: "12π cm",
+    img :"../assets/img/kerucut3.png"
   },
   {
-    soal: `Sebuah kerucut memiliki jari-jari alas r=5 cm dan tinggi t=12 cm. Berapakah luas permukaan total kerucut?`,
-    opsi: ["85π cm²","65π cm²","130π cm²","255 cm²"],
-    jawaban: "85π cm²"
+    soal: `Di sekolah, sebuah kerucut digunakan sebagai corong air. Corong memiliki volume 314 cm³ dan jari-jari alas 5 cm. Berapa tinggi corong tersebut? (π = 3,14)`,
+    opsi: ["6 cm","12 cm","15 cm","18 cm"],
+    jawaban: "12 cm",
+    img :"../assets/img/kerucut4.png"
   },
   {
-    soal: `Sebuah kerucut memiliki jari-jari alas r=7 cm dan garis pelukis 10 cm. Berapakah luas selimut kerucut tersebut?`,
-    img: "../assets/img/710.jpeg",
-    opsi: ["154 cm²","220 cm²","70π cm²","77π cm²"],
-    jawaban: "77π cm²"
+    soal: `Sebuah tenda kecil berbentuk kerucut memiliki jari-jari alas 3 m dan tinggi 4 m. Seluruh bagian luar tenda ingin dicat. Berapa luas permukaan tenda yang harus dicat? (π = 3,14)`,
+    opsi: ["56,52 m²","47,1 m²","37,68 m²","28,26 m²"],
+    jawaban: "56,52 m²",
+    img :"../assets/img/kerucut5.png"
   }
 ];
+
 
 /* Acak opsi */
 function shuffle(arr){ return arr.sort(()=>Math.random()-0.5); }
