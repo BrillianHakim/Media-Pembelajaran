@@ -449,13 +449,13 @@ function tampilkanDetailHasil(skorTotal, persentaseTotal, predikat, s1, s2, s3) 
       <h5>Kamu telah menyelesaikan semua latihan!</h5>
 
       <div class="row mt-4">
-        <div class="col-md-4"><div class="card bg-info text-white"><div class="card-body">
+        <div class="col-md-4"><div class="card bg-info text-white mb-3"><div class="card-body">
           <h6>Latihan 1</h6><div class="h4">${s1}/5</div>
         </div></div></div>
-        <div class="col-md-4"><div class="card bg-primary text-white"><div class="card-body">
+        <div class="col-md-4"><div class="card bg-primary text-white mb-3"><div class="card-body">
           <h6>Latihan 2</h6><div class="h4">${s2}/5</div>
         </div></div></div>
-        <div class="col-md-4"><div class="card bg-warning text-dark"><div class="card-body">
+        <div class="col-md-4"><div class="card bg-warning text-dark mb-3"><div class="card-body">
           <h6>Latihan 3</h6><div class="h4">${s3}/5</div>
         </div></div></div>
       </div>

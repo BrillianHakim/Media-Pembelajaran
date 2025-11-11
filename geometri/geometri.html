@@ -14,6 +14,7 @@ window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
     body {
       background: #f9f9ff;
       font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
     }
     .hero {
       background: linear-gradient(45deg, #9b59b6, #2980b9);
@@ -81,6 +82,20 @@ window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
   .text-justify {
   text-align: justify;}
   
+  /* Rumus agar tidak keluar layar — bisa scroll jika terlalu panjang */
+.rumus-box,
+mjx-container {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: block;
+}
+
+/* Agar teks math bisa wrap kalau perlu */
+mjx-container > svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
   </style>
   <!-- MathJax untuk render rumus matematika -->
 <script>

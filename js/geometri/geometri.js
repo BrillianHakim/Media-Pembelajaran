@@ -289,7 +289,7 @@ function tampilkanDetailHasil(skorTotal, persentaseTotal, predikat, skorLatihan1
       
       <div class="row mt-4">
         <div class="col-md-4 mb-3">
-          <div class="card bg-info text-white">
+          <div class="card bg-info text-white mb-3">
             <div class="card-body">
               <h6>Latihan 1 - Luas</h6>
               <div class="h4">${skorLatihan1}/5</div>
@@ -297,7 +297,7 @@ function tampilkanDetailHasil(skorTotal, persentaseTotal, predikat, skorLatihan1
           </div>
         </div>
         <div class="col-md-4 mb-3">
-          <div class="card bg-primary text-white">
+          <div class="card bg-primary text-white mb-3">
             <div class="card-body">
               <h6>Latihan 2 - Volume</h6>
               <div class="h4">${skorLatihan2}/5</div>
@@ -305,7 +305,7 @@ function tampilkanDetailHasil(skorTotal, persentaseTotal, predikat, skorLatihan1
           </div>
         </div>
         <div class="col-md-4 mb-3">
-          <div class="card bg-warning text-dark">
+          <div class="card bg-warning text-dark mb-3">
             <div class="card-body">
               <h6>Latihan 3 - Cerita</h6>
               <div class="h4">${skorLatihan3}/5</div>
