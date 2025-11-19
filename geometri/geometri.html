@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <script>
-window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geometri — Kerucut</title>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
       background: #f9f9ff;
@@ -18,7 +25,7 @@ window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
     }
     .hero {
       background: linear-gradient(45deg, #9b59b6, #2980b9);
-      color: white;
+      color: #fff;
       padding: 50px 20px;
       border-radius: 10px;
     }
@@ -39,82 +46,59 @@ window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
       padding: 10px;
       border-radius: 5px;
     }
-    /* Animasi benar / salah */
-    .benar-anim {
-      animation: benarAnim 0.4s ease;
-    }
-    .salah-anim {
-      animation: salahAnim 0.4s ease;
-    }
-    @keyframes benarAnim {
-      50% { background-color: #c8f7c5; }
-    }
-    @keyframes salahAnim {
-      50% { background-color: #ffd2d2; }
-    }
-    .rumus-box {
-  background: #f6f6ff;
-  border-left: 4px solid #5a4bdb;
-  padding: 10px 12px;
-  margin: 10px 0;
-  font-size: 1.05rem;
-}
- .responsive-img {
-    width: 100%;
-    height: auto;
-    max-width: 500px; /* boleh diatur sesuai kebutuhan */
-  }
+    .benar-anim { animation: benarAnim 0.4s ease; }
+    .salah-anim { animation: salahAnim 0.4s ease; }
 
-  /* Untuk layar sangat kecil (<576px) */
-  @media (max-width: 576px) {
+    @keyframes benarAnim { 50% { background-color: #c8f7c5; } }
+    @keyframes salahAnim { 50% { background-color: #ffd2d2; } }
+
+    .rumus-box {
+      background: #f6f6ff;
+      border-left: 4px solid #5a4bdb;
+      padding: 10px 12px;
+      margin: 10px 0;
+      font-size: 1.05rem;
+    }
     .responsive-img {
-      max-width: 100% !important;
-      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+    }
+    @media (max-width: 576px) {
+      .responsive-img {
+        max-width: 100% !important;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    .text-center img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .text-justify { text-align: justify; }
+
+    /* Rumus agar tidak overflow */
+    .rumus-box, mjx-container {
+      max-width: 100%;
+      overflow-x: auto;
       display: block;
     }
-  }
-
-  /* Untuk gambar di tengah */
-  .text-center img {
-    margin-left: auto;
-    margin-right: auto;
-  }  
-  .text-justify {
-  text-align: justify;}
-  
-  /* Rumus agar tidak keluar layar — bisa scroll jika terlalu panjang */
-.rumus-box,
-mjx-container {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  display: block;
-}
-
-/* Agar teks math bisa wrap kalau perlu */
-mjx-container > svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
+    mjx-container > svg {
+      max-width: 100% !important;
+      height: auto !important;
+    }
   </style>
-  <!-- MathJax untuk render rumus matematika -->
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: { fontCache: 'global' }
-  };
-</script>
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
+
 <!-- NAV -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background:#5335d2;">
   <div class="container">
     <a class="navbar-brand fw-bold" href="../index.html">Materi Pembelajaran</a>
   </div>
 </nav>
+
 <!-- HEADER -->
 <div class="container mt-4">
   <div class="hero text-center shadow">
@@ -122,93 +106,62 @@ mjx-container > svg {
     <p class="mt-2">Mempelajari pengertian, ciri, bagian, rumus, dan contoh soal kerucut.</p>
   </div>
 </div>
+
 <!-- CONTENT -->
 <div class="container my-4">
+
+  <!-- Pengantar -->
   <div class="section-box">
-    <h2 class="text-center mb-4" style="color: #5e35b1;">🌟 Pengantar Materi Geometri Bangun Ruang Kerucut</h2>
+    <h2 class="text-center mb-4" style="color:#5e35b1;">🌟 Pengantar Materi Geometri Bangun Ruang Kerucut</h2>
+
     <div class="text-center mb-4">
-  <img 
-    src="../assets/img/Pengantar-Kerucut.png"
-    alt="Ilustrasi Pengantar Kerucut dalam Kehidupan Sehari-hari"
-    class="img-fluid rounded shadow"
-    style="max-width: 300px; height: auto;"
-  >
-</div>
-<div class="text-justify">
-  <p>
-      Geometri adalah cabang matematika yang mempelajari bentuk, ukuran, posisi, dan sifat-sifat ruang. 
-      Salah satu bangun ruang yang sering kita temui dalam kehidupan sehari-hari adalah <strong>kerucut</strong>.
-    </p>
-    <p>
-      Kerucut merupakan bangun ruang yang memiliki alas berbentuk lingkaran dan sisi melengkung yang menghubungkan 
-      titik alas ke suatu titik puncak yang disebut sebagai <em>apex</em>.
-    </p>
-    <p>
-      Meskipun bentuk kerucut terlihat sederhana, kerucut memiliki peran yang sangat penting dalam berbagai aspek 
-      kehidupan kita. Misalnya, kita dapat menemui kerucut dalam bentuk es krim yang kita makan, kerucut pada atap 
-      bangunan, bahkan bentuk kerucut yang digunakan dalam desain arsitektur dan teknik. Bentuk kerucut juga terlihat 
-      pada berbagai benda sehari-hari seperti corong, piramida modern, dan bahkan pada sumbu tornado di alam.
-    </p>
-    <p>
-      Mempelajari kerucut tidak hanya membantu kita memahami bentuknya secara matematis, tetapi juga memberikan 
-      wawasan tentang aplikasi praktisnya dalam berbagai bidang, dari desain produk hingga struktur bangunan. 
-      Melalui pemahaman tentang volume, luas permukaan, dan sifat-sifat kerucut, kita dapat lebih menghargai 
-      peran bangun ruang ini dalam menciptakan benda-benda yang kita gunakan setiap hari.
-    </p>
-    <p class="mb-0">
-      Dalam materi ini, kita akan mengeksplorasi lebih jauh tentang kerucut, mulai dari sifat-sifat dasar hingga 
-      penerapan dalam kehidupan nyata. Dengan begitu, kita dapat melihat betapa pentingnya peran geometri dalam 
-      membantu kita memahami dunia di sekitar kita.
-    </p>
-</div>
+      <img src="../assets/img/Pengantar-Kerucut.png" class="img-fluid rounded shadow" style="max-width:300px;" alt="Pengantar Kerucut">
+    </div>
+
+    <div class="text-justify">
+      <p>Geometri adalah cabang matematika ...</p>
+      <p>Kerucut merupakan bangun ruang ...</p>
+      <p>Meskipun bentuk kerucut terlihat sederhana ...</p>
+      <p>Mempelajari kerucut tidak hanya ...</p>
+      <p class="mb-0">Dalam materi ini ...</p>
+    </div>
   </div>
+
   <!-- Pengertian Geometri -->
   <div class="section-box">
     <h2>📘 Pengertian Geometri</h2>
+
     <div class="text-center mb-4">
-  <img 
-    src="../assets/img/Geometri.jpg"
-    alt="geometri"
-    class="img-fluid rounded shadow"
-    style="max-width: 300px; height: auto;"
-  >
-</div>
+      <img src="../assets/img/Geometri.jpg" class="img-fluid rounded shadow" style="max-width:300px;" alt="Geometri">
+    </div>
 
     <p>
-      Geometri adalah cabang matematika yang mempelajari bentuk, ukuran, luas, volume, dan sifat-sifat bangun datar dan bangun ruang.
+      Geometri adalah cabang matematika yang mempelajari bentuk, ukuran, luas, volume, dan sifat-sifat bangun datar dan ruang.
       Kata geometri berasal dari bahasa Yunani: <b>geo</b> (bumi) dan <b>metron</b> (mengukur).
     </p>
   </div>
+
   <!-- Pengertian Kerucut -->
   <div class="section-box">
     <h2>📘 Pengertian Kerucut</h2>
-    <!-- ✅ Gambar -->
-   <div class="text-center mb-4">
-  <img 
-    src="../assets/img/Kerucut.png"
-    alt="Kerucut"
-    class="img-fluid rounded shadow"
-    style="max-width: 300px; height: auto;"
-  >
-</div>
+
+    <div class="text-center mb-4">
+      <img src="../assets/img/Kerucut.png" class="img-fluid rounded shadow" style="max-width:300px;" alt="Kerucut">
+    </div>
 
     <p>
       Kerucut adalah bangun ruang tiga dimensi yang memiliki alas berbentuk lingkaran dan satu titik puncak.
       Kerucut terbentuk dari perputaran segitiga siku-siku.
     </p>
   </div>
+
   <!-- Bagian Kerucut -->
   <div class="section-box">
     <h2>🧩 Bagian-Bagian Kerucut</h2>
-    <!-- ✅ Gambar -->
+
     <div class="text-center mb-4">
-  <img 
-    src="../assets/img/hai.JPG"
-    alt="kerucut"
-    class="img-fluid rounded shadow"
-    style="max-width: 300px; height: auto;"
-  >
-</div>
+      <img src="../assets/img/hai.JPG" class="img-fluid rounded shadow" style="max-width:300px;" alt="Bagian Kerucut">
+    </div>
 
     <ul>
       <li><b>Alas</b> → lingkaran dengan jari-jari <b>r</b></li>
@@ -217,297 +170,156 @@ mjx-container > svg {
       <li><b>Garis Pelukis (s)</b> → jarak dari puncak ke tepi alas</li>
     </ul>
   </div>
+
+  <!-- Contoh Nyata -->
   <div class="section-box">
-  <h2>🖼️ Contoh Gambar Nyata</h2>
+    <h2>🖼️ Contoh Gambar Nyata</h2>
 
-  <div class="text-center mb-4">
-  <img 
-    src="../assets/img/Asli Kerucut.webp"
-    alt="cut"
-    class="img-fluid rounded shadow"
-    style="max-width: 300px; height: auto;"
-  >
-</div>
-
-</div>
-<!-- Sifat -->
-<div class="section-box">
-  <h2>✨ Sifat-Sifat Kerucut</h2>
-<div class="text-center mb-4">
-  <img 
-    src="../assets/img/Sifat-Sifat Kerucut.jpg"
-    alt="sifat-sifat"
-    class="img-fluid rounded shadow"
-    style="max-width: 300px; height: auto;"
-  >
-</div>
-  <ol>
-    <li>
-      <b>Memiliki 1 Alas Berbentuk Lingkaran</b>
-      <ul>
-        <li>Alas kerucut berbentuk lingkaran dengan jari-jari (r) tertentu.</li>
-        <li>Semua titik pada tepi alas berjarak sama dari titik pusat alas.</li>
-      </ul>
-    </li>
-    <li>
-      <b>Memiliki 1 Titik Puncak</b>
-      <ul>
-        <li>Puncak kerucut adalah titik tertinggi yang tidak terletak pada bidang alas.</li>
-        <li>Dari puncak ini, jika ditarik garis ke tepi alas, akan terbentuk selimut kerucut.</li>
-      </ul>
-    </li>
-    <li>
-      <b>Memiliki 1 Sisi Lengkung (Selimut Kerucut)</b>
-      <ul>
-        <li>Sisi lengkung ini disebut selimut kerucut.</li>
-        <li>Jika dibuka atau direntangkan, selimut kerucut berbentuk juring lingkaran.</li>
-        <li>Panjang busur juring = keliling alas kerucut (2πr).</li>
-      </ul>
-    </li>
-    <li>
-      <b>Tidak Memiliki Rusuk Sejati</b>
-      <ul>
-        <li>Kerucut tidak memiliki rusuk seperti bangun ruang lainnya.</li>
-        <li>Namun, terdapat garis lengkung sebagai batas antara alas dan selimut.</li>
-      </ul>
-    </li>
-    <li>
-      <b>Tidak Memiliki Titik Sudut Alas</b>
-      <ul>
-        <li>Karena alasnya berbentuk lingkaran, tidak ada sudut-sudut tajam pada alas kerucut.</li>
-        <li>Hanya ada satu titik sudut, yaitu titik puncak.</li>
-      </ul>
-    </li>
-    <li>
-      <b>Memiliki 2 Bidang (Sisi)</b>
-      <ul>
-        <li>Satu bidang datar (alas)</li>
-        <li>Satu bidang lengkung (selimut)</li>
-      </ul>
-    </li>
-  </ol>
-</div>
-  <!-- Rumus -->
-<div class="section-box">
-  <h2>🧮 Rumus Kerucut</h2>
-  <h4>1) Luas Alas Kerucut</h4>
-   <div class="text-center mb-4">
-  <img 
-    src="../assets/img/Lalas.png"
-    alt="alas"
-    class="img-fluid rounded shadow"
-    style="max-width: 300px; height: auto;"
-  >
-</div>
-  <p>
-    Karena alas kerucut berbentuk lingkaran, maka luas alasnya adalah:
-  </p>
-  <p class="rumus-box">$$L_{alas} = \pi r^2$$</p>
-  <p>
-    Dengan: <br>
-    r = jari-jari alas
-  </p>
-  <hr>
-  <h4>2) Luas Selimut Kerucut</h4>
-   <div class="text-center mb-4">
-  <img 
-    src="../assets/img/LSelimut.png"
-    alt="Swlimut"
-    class="img-fluid rounded shadow"
-    style="max-width: 300px; height: auto;"
-  >
-</div>
-  <p>
-    Jika selimut kerucut dibuka, bentuknya menjadi juring lingkaran dengan:
-  </p>
-  <ul>
-    <li>Jari-jari juring = s (garis pelukis)</li>
-    <li>Panjang busur = keliling alas kerucut = 2πr</li>
-  </ul>
-  <p class="rumus-box">$$L_{selimut} = \pi r s$$</p>
-  <hr>
-  <h4>3) Luas Permukaan Kerucut</h4>
-  <div class="text-center mb-4">
-  <img 
-    src="../assets/img/LuasPermukaanKerucut.JPG"
-    alt="LuasPermukaanKerucut"
-    class="img-fluid rounded shadow"
-    style="max-width: 300px; height: auto;"
-  >
-</div>
-  <p>
-    Luas permukaan kerucut adalah gabungan luas alas dan selimut:
-  </p>
-  <p class="rumus-box">$$L = \pi r^2 + \pi r s = \pi r (r + s)$$</p>
-
-  <hr>
-  <h4>4) Hubungan Volume Kerucut dengan Tabung</h4>
-  <p>
-    Jika kerucut dan tabung memiliki jari-jari dan tinggi yang sama:
-  </p>
-  <p>
-    <strong>3 kerucut = 1 tabung</strong>
-  </p>
-  <hr>
-  <h4>5) Volume Kerucut</h4>
-  <div class="text-center mb-4">
-  <img 
-    src="../assets/img/VolumeKerucut.webp"
-    alt="volume"
-    class="img-fluid rounded shadow"
-    style="max-width: 300px; height: auto;"
-  >
-</div>
-  <p>
-    Rumus volume tabung:
-  </p>
-  <p class="rumus-box">$$V_{tabung} = \pi r^2 t$$</p>
-  <p>
-    Karena 3 kerucut = 1 tabung, maka:
-  </p>
-    <p class="rumus-box">$$V_{kerucut} = \frac{1}{3} \pi r^2 t$$</p>
-  <!-- Ringkasan Rumus -->
-  <h2>🧾 Ringkasan Rumus</h2>
-  <div class="rumus-box">
-    <p>\[\text{Luas Alas} = \pi r^2\]</p>
-<p >\[\text{Luas Selimut} = \pi r s\]</p>
-<p >\[\text{Luas Permukaan} = \pi r (r + s)\]</p>
-<p >\[\text{Volume} = \frac{1}{3} \pi r^2 t\]</p>
+    <div class="text-center mb-4">
+      <img src="../assets/img/Asli Kerucut.webp" class="img-fluid rounded shadow" style="max-width:300px;" alt="Contoh Kerucut Nyata">
+    </div>
   </div>
 
-  
-  <!-- 🔹 Jaring-Jaring Kerucut -->
-  
+  <!-- Sifat Kerucut -->
+  <div class="section-box">
+    <h2>✨ Sifat-Sifat Kerucut</h2>
+
+    <div class="text-center mb-4">
+      <img src="../assets/img/Sifat-Sifat Kerucut.jpg" class="img-fluid rounded shadow" style="max-width:300px;" alt="Sifat Kerucut">
+    </div>
+
+    <ol>
+      <li><b>Memiliki 1 Alas Berbentuk Lingkaran</b> ...</li>
+      <li><b>Memiliki 1 Titik Puncak</b> ...</li>
+      <li><b>Memiliki 1 Sisi Lengkung</b> ...</li>
+      <li><b>Tidak Memiliki Rusuk Sejati</b> ...</li>
+      <li><b>Tidak Memiliki Titik Sudut Alas</b> ...</li>
+      <li><b>Memiliki 2 Bidang</b> ...</li>
+    </ol>
+  </div>
+
+  <!-- Rumus -->
+  <div class="section-box">
+    <h2>🧮 Rumus Kerucut</h2>
+
+    <!-- Setiap rumus sudah rapi -->
+
+    <h4>1) Luas Alas Kerucut</h4>
+    <div class="text-center mb-4">
+      <img src="../assets/img/Lalas.png" class="img-fluid rounded shadow" style="max-width:300px;" alt="Luas Alas">
+    </div>
+
+    <p>Luas alas:</p>
+    <p class="rumus-box">$$L_{alas} = \pi r^2$$</p>
+
+    <hr>
+
+    <h4>2) Luas Selimut Kerucut</h4>
+    <div class="text-center mb-4">
+      <img src="../assets/img/LSelimut.png" class="img-fluid rounded shadow" style="max-width:300px;" alt="Luas Selimut">
+    </div>
+
+    <p class="rumus-box">$$L_{selimut} = \pi r s$$</p>
+
+    <hr>
+
+    <h4>3) Luas Permukaan Kerucut</h4>
+    <div class="text-center mb-4">
+      <img src="../assets/img/LuasPermukaanKerucut.JPG" class="img-fluid rounded shadow" style="max-width:300px;" alt="Luas Permukaan">
+    </div>
+
+    <p class="rumus-box">$$L = \pi r^2 + \pi r s = \pi r (r + s)$$</p>
+
+    <hr>
+
+    <h4>4) Volume Kerucut</h4>
+    <div class="text-center mb-4">
+      <img src="../assets/img/VolumeKerucut.webp" class="img-fluid rounded shadow" style="max-width:300px;" alt="Volume">
+    </div>
+
+    <p class="rumus-box">$$V_{kerucut} = \frac{1}{3} \pi r^2 t$$</p>
+
+    <h2>🧾 Ringkasan Rumus</h2>
+    <div class="rumus-box">
+      \[
+        \text{Luas Alas} = \pi r^2 \\
+        \text{Luas Selimut} = \pi r s \\
+        \text{Luas Permukaan} = \pi r (r + s) \\
+        \text{Volume} = \frac{1}{3} \pi r^2 t
+      \]
+    </div>
+
+    <!-- Jaring-jaring Kerucut -->
     <h2>📐 Jaring-Jaring Kerucut</h2>
     <div class="text-center mb-4">
-      <img src="../assets/img/Jaring-JaringKeru.png" alt="Jaring Kerucut" class="img-fluid rounded shadow" style="max-width: 320px;">
+      <img src="../assets/img/Jaring-JaringKeru.png" class="img-fluid rounded shadow" style="max-width:320px;" alt="Jaring Kerucut">
     </div>
 
-    <p>
-      Jaring-jaring kerucut adalah bentuk datar yang didapat jika permukaan kerucut dibuka dan direntangkan.
-      Jaring-jaring ini terdiri atas:
-    </p>
-    <ul>
-      <li>1 lingkaran (alas kerucut)</li>
-      <li>1 juring lingkaran (selimut kerucut)</li>
-    </ul>
+    <p>Jaring-jaring kerucut ...</p>
 
     <h4>💠 Luas Jaring-Jaring Kerucut</h4>
-    <p>
-      Luas jaring-jaring kerucut sama dengan luas permukaan kerucut, yaitu:
-    </p>
-    <p class="rumus-box">\( L_{jaring} = L_{alas} + L_{selimut} = \pi r^2 + \pi r s = \pi r (r + s) \)</p>
+    <p class="rumus-box">\( L_{jaring} = \pi r (r + s) \)</p>
 
-    <h4>💠 Cara Menghitung Panjang Busur Juring (Selimut)</h4>
-    <p>
-      Panjang busur juring (pada jaring-jaring) sama dengan keliling alas kerucut:
-    </p>
-    <p class="rumus-box">\( 2 \pi r = \frac{\theta}{360^\circ} \times 2 \pi s \)</p>
-    <p>
-      Dari sini, besar sudut juring dapat dicari dengan:
-    </p>
-    <p class="rumus-box">\( \theta = \frac{r}{s} \times 360^\circ \)</p>
+    <h4>💠 Panjang Busur</h4>
+    <p class="rumus-box">\( 2\pi r = \frac{\theta}{360^\circ} 2\pi s \)</p>
 
-    <h4>💠 Volume dari Jaring-Jaring Kerucut</h4>
-    <p>
-      Setelah jaring-jaring dilipat menjadi bentuk ruang, volumenya kembali seperti kerucut:
-    </p>
+    <h4>💠 Volume</h4>
     <p class="rumus-box">\( V = \frac{1}{3} \pi r^2 t \)</p>
 
-    <h5>🔹 Contoh Soal:</h5>
-    <p>
-      Diketahui jari-jari kerucut \(r = 7 \, cm\), garis pelukis \(s = 10 \, cm\).  
-      Hitung luas jaring-jaring kerucut!
-    </p>
+    <h5>Contoh Soal:</h5>
     <div class="highlight">
-      \( L = \pi r (r + s) = 3.14 \times 7 \times (7 + 10) = 373.66 \, cm^2 \)
+      \( L = 3.14 \times 7 \times (7 + 10) = 373.66 \, cm^2 \)
     </div>
-
-    <p><b>✅ Jadi, luas jaring-jaring kerucut adalah 373,66 cm².</b></p>
-  
-  
-</div>
-  <!-- Contoh -->
-<div class="section-box">
-  <h2>📏 Contoh Soal</h2>
-  <p>
-    <b>Contoh 1:</b><br>
-    Sebuah kerucut memiliki jari-jari <b>7 cm</b> dan garis pelukis <b>10 cm</b>. 
-    Hitung luas permukaannya!
-  </p>
-  <div class="highlight">
-    = π × r (r + s)  
-    = 3.14 × 7 × (7 + 10)  
-    = 3.14 × 7 × 17  
-    = 373.66 cm² ✅
   </div>
-  <hr>
-  <p>
-    <b>Contoh 2:</b><br>
-    Kerucut memiliki garis pelukis <b>s = 13 cm</b> dan jari-jari <b>r = 5 cm</b>.<br>
-    Hitung volumenya!
-  </p>
-  <h5 class="fw-bold mt-3">Langkah 1 — Mencari tinggi (t):</h5>
-<div class="rumus-box">
-  \[
-  \begin{aligned}
-  s^2 &= r^2 + t^2 \\
-  13^2 &= 5^2 + t^2 \\
-  169 &= 25 + t^2 \\
-  t^2 &= 144 \Rightarrow t = 12
-  \end{aligned}
-  \]
-</div>
 
-  <h5 class="fw-bold mt-3">Langkah 2 — Menghitung volume:</h5>
+  <!-- Contoh Soal -->
+  <div class="section-box">
+    <h2>📏 Contoh Soal</h2>
+    <!-- Sudah rapi -->
+  </div>
 
-<div class="rumus-box">
-  \[
-  \begin{aligned}
-  V &= \frac{1}{3} \pi r^2 t \\
-  V &= \frac{1}{3} \times 3.14 \times 5^2 \times 12 \\
-  V &= \frac{1}{3} \times 3.14 \times 25 \times 12 \\
-  V &= \frac{1}{3} \times 942 \\
-  V &= 314
-  \end{aligned}
-  \]
-</div>
-
-  <p><b>✅ Jadi Volume Kerucut = 314 cm³</b></p>
-</div>
   <!-- Kalkulator -->
   <div class="section-box">
     <h2>🧮 Kalkulator Kerucut</h2>
+
     <div class="row g-3">
       <div class="col-md-4">
         <label>Jari-jari (r)</label>
         <input type="number" id="r" class="form-control" placeholder="cm">
       </div>
+
       <div class="col-md-4">
         <label>Tinggi (t)</label>
         <input type="number" id="t" class="form-control" placeholder="cm">
       </div>
+
       <div class="col-md-4">
         <label>Garis Pelukis (s)</label>
         <input type="number" id="s" class="form-control" placeholder="cm">
       </div>
     </div>
+
     <button class="btn btn-primary mt-3" onclick="hitungKerucut()">Hitung</button>
     <div id="hasilKerucut" class="mt-3"></div>
   </div>
-  <!-- quiz -->
+
+  <!-- Quiz -->
   <div class="section-box">
-  <h2>Lembar Kerja Peserta Didik</h2>
-  <p>Jawab soal berikut dan cek hasilnya!</p>
-  <div id="quiz-area"></div>
-  <p id="skorText" class="fw-bold mt-3"></p>
+    <h2>Lembar Kerja Peserta Didik</h2>
+    <p>Jawab soal berikut dan cek hasilnya!</p>
+    <div id="quiz-area"></div>
+    <p id="skorText" class="fw-bold mt-3"></p>
+  </div>
+
 </div>
-</div>
+
 <!-- BACK -->
 <div class="text-center p-3">
   <a href="../index.html" class="btn btn-secondary">⬅ Kembali</a>
 </div>
-<script src="../js/geometri/geometri.js">
-</script>
+
+<!-- Script -->
+<script src="../js/geometri/geometri.js"></script>
+
 </body>
 </html>

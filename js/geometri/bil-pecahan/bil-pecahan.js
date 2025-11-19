@@ -102,7 +102,6 @@ function hitungPecahan() {
     MathJax.typesetPromise([hasilDiv]).catch((err) => console.log(err));
   }
 }
-
 document.addEventListener('DOMContentLoaded', function() {
   ['f1', 'f2'].forEach(id => {
     let elem = document.getElementById(id);
@@ -235,7 +234,6 @@ let soalList = [
     jawaban: "2\\( \\frac{11}{12} \\)"
   }
 ];
-
 
 let currentLatihan = 1;
 let skorTotal = 0;

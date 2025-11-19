@@ -1,105 +1,111 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz – Geometri</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz – Geometri</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-  body {
-    background: #e4ffec;
-    font-family: "Poppins", sans-serif;
-  }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  .section-box {
-    background: #fff;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-bottom: 25px;
-  }
+  <!-- Style Utama -->
+  <style>
+    /* ====== Dasar Halaman ====== */
+    body {
+      background: #e4ffec;
+      font-family: "Poppins", sans-serif;
+    }
 
-  .benar {
-    background: #d8ffdf !important;
-  }
+    /* ====== Box Soal ====== */
+    .section-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
 
-  .salah {
-    background: #ffd7d7 !important;
-  }
+    /* Warna benar / salah */
+    .benar { background: #d8ffdf !important; }
+    .salah { background: #ffd7d7 !important; }
 
-  /* Animasi */
-  .benar-anim {
-    border: 2px solid #28a745;
-    animation: benarAnim .4s;
-  }
+    /* ====== Animasi Feedback ====== */
+    .benar-anim {
+      border: 2px solid #28a745;
+      animation: benarAnim .4s;
+    }
 
-  .salah-anim {
-    border: 2px solid #dc3545;
-    animation: salahAnim .4s;
-  }
+    .salah-anim {
+      border: 2px solid #dc3545;
+      animation: salahAnim .4s;
+    }
 
-  @keyframes benarAnim {
-    0%{background-color:#ffffff;}
-    50%{background-color:#c8f7c5;}
-    100%{background-color:#ffffff;}
-  }
-  @keyframes salahAnim {
-    0%{background-color:#ffffff;}
-    50%{background-color:#ffd1d1;}
-    100%{background-color:#ffffff;}
-  }
+    @keyframes benarAnim {
+      0% { background-color: #ffffff; }
+      50% { background-color: #c8f7c5; }
+      100% { background-color: #ffffff; }
+    }
 
-  .hero {
-    border-radius: 18px;
-    padding: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
-  .text-center img {
-    margin-left: auto;
-    margin-right: auto;
-  } 
-  .responsive-img {
-    width: 100%;
-    height: auto;
-    max-width: 500px; /* boleh diatur sesuai kebutuhan */
-  }
-</style>
+    @keyframes salahAnim {
+      0% { background-color: #ffffff; }
+      50% { background-color: #ffd1d1; }
+      100% { background-color: #ffffff; }
+    }
+
+    /* Header quiz */
+    .hero {
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Gambar responsif */
+    .responsive-img {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 
 <body class="container py-4">
 
-<!-- ✅ HEADER -->
-<div class="container mt-4">
-  <div class="hero text-center shadow"
-       style="background: linear-gradient(135deg,#93c5fd,#a5f3fc); color:#003366;">
-    <h1 class="fw-bold">📘 Quiz – Geometri (Kerucut)</h1>
-    <p class="mt-2">Uji pengetahuanmu tentang kerucut!</p>
-  </div>
-</div>
-
-<!-- ✅ QUIZ AREA -->
-<main class="container py-4">
-  <div id="quiz-area"></div>
-
-  <div class="text-center mt-3">
-    <button class="btn btn-success" onclick="periksaSemua()">✅ Periksa Semua</button>
+  <!-- ====== HEADER ====== -->
+  <div class="container mt-4">
+    <div class="hero text-center shadow"
+         style="background: linear-gradient(135deg,#93c5fd,#a5f3fc); color:#003366;">
+      <h1 class="fw-bold">📘 Quiz – Geometri (Kerucut)</h1>
+      <p class="mt-2">Uji pengetahuanmu tentang kerucut!</p>
+    </div>
   </div>
 
-  <h4 id="skorText" class="fw-bold text-center mt-3"></h4>
+  <!-- ====== AREA QUIZ ====== -->
+  <main class="container py-4">
 
-  <div class="text-center mt-3">
-    <a href="./quiz.html" class="btn btn-outline-secondary">⬅ Kembali</a>
-  </div>
-</main>
+    <div id="quiz-area"></div>
 
-<!-- ✅ AUDIO -->
-<audio id="audioBenar" src="../assets/BENAR.mp3"></audio>
+    <div class="text-center mt-3">
+      <button class="btn btn-success" onclick="periksaSemua()">✅ Periksa Semua</button>
+    </div>
 
-<!-- ✅ SCRIPT -->
-<script src="../js/geometri/quiz/quiz-geometri.js"></script>
+    <h4 id="skorText" class="fw-bold text-center mt-3"></h4>
+
+    <div class="text-center mt-3">
+      <a href="./quiz.html" class="btn btn-outline-secondary">⬅ Kembali</a>
+    </div>
+
+  </main>
+
+  <!-- ====== AUDIO FEEDBACK ====== -->
+  <audio id="audioBenar" src="../assets/BENAR.mp3"></audio>
+
+  <!-- ====== SCRIPT QUIZ ====== -->
+  <script src="../js/geometri/quiz/quiz-geometri.js"></script>
 
 </body>
 </html>
